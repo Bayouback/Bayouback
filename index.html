@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЮВИ — создание сайтов</title>
+<meta name="description" content="ЮВИ — студия по созданию сайтов: лендинги, интернет-магазины, корпоративные сайты, поддержка и продвижение.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="ЮВИ — на главную">
+      <span class="brand-badge" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="36" height="36">
+          <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#gradHeader)"/>
+          <defs>
+            <linearGradient id="gradHeader" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#4f5bff"/>
+              <stop offset="1" stop-color="#22d3ee"/>
+            </linearGradient>
+          </defs>
+          <rect x="16" y="12" width="6" height="8" rx="3" fill="#fff"/>
+          <circle cx="19" cy="10" r="3" fill="#fff"/>
+          <rect x="14" y="20" width="36" height="30" rx="10" fill="#fff"/>
+          <circle cx="25" cy="34" r="5" fill="#4f5bff"/>
+          <circle cx="39" cy="34" r="5" fill="#22d3ee"/>
+          <rect x="24" y="43" width="16" height="4" rx="2" fill="#c7cbff"/>
+          <rect x="6" y="30" width="6" height="12" rx="3" fill="#fff"/>
+          <rect x="52" y="30" width="6" height="12" rx="3" fill="#fff"/>
+        </svg>
+      </span>
+      <span class="brand-name">ЮВИ</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#process">Как мы работаем</a></li>
+        <li><a href="#pricing">Цены</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-primary btn-sm">Заказать сайт</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Студия веб-разработки</p>
+        <h1>Создаём сайты,<br>которые <span class="text-accent">работают</span> на бизнес</h1>
+        <p class="hero-lead">
+          ЮВИ — команда и умный робот-помощник, которые проектируют, разрабатывают
+          и продвигают сайты: от лендинга до интернет-магазина. Быстро, аккуратно,
+          с понятным результатом на каждом этапе.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary btn-lg">Обсудить проект</a>
+          <a href="#services" class="btn btn-ghost btn-lg">Смотреть услуги</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>120+</strong><span>сайтов запущено</span></li>
+          <li><strong>4.9/5</strong><span>средняя оценка клиентов</span></li>
+          <li><strong>14 дней</strong><span>средний срок лендинга</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-art reveal" aria-hidden="true">
+        <div class="robot-card">
+          <svg viewBox="0 0 240 240" width="100%" height="100%">
+            <defs>
+              <linearGradient id="gradBody" x1="0" y1="0" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#4f5bff"/>
+                <stop offset="1" stop-color="#22d3ee"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="120" cy="210" rx="70" ry="10" fill="#eef1ff"/>
+            <rect x="108" y="52" width="10" height="26" rx="5" fill="#c7cbff"/>
+            <circle cx="113" cy="46" r="9" fill="url(#gradBody)"/>
+            <rect x="52" y="74" width="136" height="104" rx="30" fill="#ffffff" stroke="url(#gradBody)" stroke-width="4"/>
+            <circle cx="92" cy="122" r="14" fill="#4f5bff"/>
+            <circle cx="148" cy="122" r="14" fill="#22d3ee"/>
+            <circle cx="96" cy="118" r="4" fill="#fff"/>
+            <circle cx="152" cy="118" r="4" fill="#fff"/>
+            <rect x="88" y="150" width="64" height="10" rx="5" fill="#d8dbff"/>
+            <rect x="30" y="104" width="20" height="46" rx="10" fill="url(#gradBody)"/>
+            <rect x="190" y="104" width="20" height="46" rx="10" fill="url(#gradBody)"/>
+            <rect x="78" y="178" width="26" height="30" rx="10" fill="#c7cbff"/>
+            <rect x="136" y="178" width="26" height="30" rx="10" fill="#c7cbff"/>
+          </svg>
+        </div>
+        <div class="floating-chip chip-1">✓ Адаптивная вёрстка</div>
+        <div class="floating-chip chip-2">⚡ Быстрая загрузка</div>
+        <div class="floating-chip chip-3">🔍 SEO-готовность</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS / TRUST -->
+  <section class="trust">
+    <div class="container">
+      <p class="trust-label">Нам доверяют предприниматели и небольшие команды</p>
+      <ul class="trust-list">
+        <li>Кафе и рестораны</li>
+        <li>Локальные магазины</li>
+        <li>Мастера и услуги</li>
+        <li>IT-стартапы</li>
+        <li>Образование</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Услуги</p>
+        <h2>Всё для запуска и роста сайта</h2>
+        <p class="section-lead">Выбирайте формат под задачу — от простой визитки до магазина с оплатой и каталогом.</p>
+      </div>
+
+      <div class="grid services-grid">
+        <article class="card service-card reveal">
+          <div class="service-icon" style="--c1:#4f5bff;--c2:#8b90ff">
+            <svg viewBox="0 0 48 48" width="28" height="28"><rect x="6" y="10" width="36" height="28" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 18h36" stroke="currentColor" stroke-width="3"/><circle cx="12" cy="14" r="1.5" fill="currentColor"/><circle cx="17" cy="14" r="1.5" fill="currentColor"/></svg>
+          </div>
+          <h3>Лендинги и сайты-визитки</h3>
+          <p>Продающая одностраничная структура: оффер, преимущества, форма заявки. Готово к запуску за 1–2 недели.</p>
+          <ul class="check-list">
+            <li>Уникальный дизайн под бренд</li>
+            <li>Адаптивность под все экраны</li>
+            <li>Интеграция форм и аналитики</li>
+          </ul>
+        </article>
+
+        <article class="card service-card reveal">
+          <div class="service-icon" style="--c1:#22d3ee;--c2:#67e8f9">
+            <svg viewBox="0 0 48 48" width="28" height="28"><path d="M8 16h32l-3 20a4 4 0 0 1-4 3H15a4 4 0 0 1-4-3L8 16Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M16 16v-2a8 8 0 0 1 16 0v2" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+          </div>
+          <h3>Интернет-магазины</h3>
+          <p>Каталог товаров, корзина, онлайн-оплата и управление заказами. Настраиваем всё, что нужно для продаж.</p>
+          <ul class="check-list">
+            <li>Каталог и фильтры</li>
+            <li>Приём онлайн-оплаты</li>
+            <li>Личный кабинет и заказы</li>
+          </ul>
+        </article>
+
+        <article class="card service-card reveal">
+          <div class="service-icon" style="--c1:#4f5bff;--c2:#22d3ee">
+            <svg viewBox="0 0 48 48" width="28" height="28"><rect x="6" y="8" width="36" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 16h36" stroke="currentColor" stroke-width="3"/><path d="M14 24h20M14 30h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Корпоративные сайты</h3>
+          <p>Многостраничные сайты для компаний: услуги, кейсы, команда, блог. Удобная админ-панель для контента.</p>
+          <ul class="check-list">
+            <li>Гибкая структура разделов</li>
+            <li>Многоязычность по запросу</li>
+            <li>Простое редактирование текстов</li>
+          </ul>
+        </article>
+
+        <article class="card service-card reveal">
+          <div class="service-icon" style="--c1:#22d3ee;--c2:#4f5bff">
+            <svg viewBox="0 0 48 48" width="28" height="28"><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="3"/><path d="M24 16v8l6 4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Поддержка и продвижение</h3>
+          <p>Техническая поддержка сайта и SEO-продвижение: рост позиций в поиске и стабильная работа сайта.</p>
+          <ul class="check-list">
+            <li>Мониторинг и обновления</li>
+            <li>SEO-оптимизация страниц</li>
+            <li>Отчёты по результатам</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-alt" id="about">
+    <div class="container about-grid">
+      <div class="about-art reveal" aria-hidden="true">
+        <svg viewBox="0 0 220 220" width="100%" height="100%">
+          <defs>
+            <linearGradient id="gradAbout" x1="0" y1="0" x2="220" y2="220" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#4f5bff"/>
+              <stop offset="1" stop-color="#22d3ee"/>
+            </linearGradient>
+          </defs>
+          <circle cx="110" cy="110" r="100" fill="#f3f5ff"/>
+          <rect x="70" y="60" width="80" height="90" rx="24" fill="#fff" stroke="url(#gradAbout)" stroke-width="5"/>
+          <circle cx="92" cy="98" r="10" fill="#4f5bff"/>
+          <circle cx="128" cy="98" r="10" fill="#22d3ee"/>
+          <rect x="86" y="120" width="48" height="8" rx="4" fill="#d8dbff"/>
+          <rect x="100" y="42" width="8" height="20" rx="4" fill="#c7cbff"/>
+          <circle cx="104" cy="38" r="7" fill="url(#gradAbout)"/>
+          <rect x="46" y="86" width="16" height="36" rx="8" fill="url(#gradAbout)"/>
+          <rect x="158" y="86" width="16" height="36" rx="8" fill="url(#gradAbout)"/>
+        </svg>
+      </div>
+      <div class="about-copy reveal">
+        <p class="eyebrow">О компании</p>
+        <h2>ЮВИ — там, где идея превращается в сайт</h2>
+        <p class="section-lead">
+          Мы небольшая студия, которая ценит скорость, прозрачность и внимание к деталям.
+          Наш символ — маленький робот-помощник: он о том, что технологии должны упрощать
+          жизнь бизнеса, а не усложнять её.
+        </p>
+        <div class="about-points">
+          <div class="about-point">
+            <h4>Прозрачные сроки</h4>
+            <p>Фиксируем этапы и даты в договоре, вы всегда знаете, на каком мы шаге.</p>
+          </div>
+          <div class="about-point">
+            <h4>Понятные цены</h4>
+            <p>Стоимость известна до старта работ — без скрытых доплат.</p>
+          </div>
+          <div class="about-point">
+            <h4>Поддержка после запуска</h4>
+            <p>Не бросаем сайт после сдачи: помогаем с обновлениями и ростом.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Как мы работаем</p>
+        <h2>Четыре шага от заявки до запуска</h2>
+      </div>
+      <ol class="process-list">
+        <li class="process-item reveal">
+          <span class="process-num">01</span>
+          <h3>Заявка и брифинг</h3>
+          <p>Обсуждаем цели, аудиторию и задачи сайта, фиксируем требования.</p>
+        </li>
+        <li class="process-item reveal">
+          <span class="process-num">02</span>
+          <h3>Дизайн и структура</h3>
+          <p>Готовим прототип и дизайн-макет, согласовываем с вами каждый экран.</p>
+        </li>
+        <li class="process-item reveal">
+          <span class="process-num">03</span>
+          <h3>Разработка</h3>
+          <p>Вёрстка, интеграции, тестирование на всех устройствах и браузерах.</p>
+        </li>
+        <li class="process-item reveal">
+          <span class="process-num">04</span>
+          <h3>Запуск и поддержка</h3>
+          <p>Публикуем сайт и остаёмся на связи для доработок и продвижения.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section section-alt" id="pricing">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Цены</p>
+        <h2>Прозрачные тарифы под задачу</h2>
+        <p class="section-lead">Финальная стоимость зависит от объёма — ниже ориентировочные пакеты.</p>
+      </div>
+
+      <div class="grid pricing-grid">
+        <article class="card pricing-card reveal">
+          <h3>Старт</h3>
+          <p class="price">от 1 500 <span>USD</span></p>
+          <p class="pricing-desc">Сайт-визитка или лендинг под ключ</p>
+          <ul class="check-list">
+            <li>До 5 экранов / блоков</li>
+            <li>Адаптивная вёрстка</li>
+            <li>Форма заявки</li>
+            <li>Базовая SEO-настройка</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-block">Выбрать пакет</a>
+        </article>
+
+        <article class="card pricing-card pricing-featured reveal">
+          <span class="pricing-badge">Популярный</span>
+          <h3>Бизнес</h3>
+          <p class="price">от 3 500 <span>USD</span></p>
+          <p class="pricing-desc">Корпоративный сайт или интернет-магазин</p>
+          <ul class="check-list">
+            <li>До 15 страниц / каталог товаров</li>
+            <li>Админ-панель для контента</li>
+            <li>Интеграция оплаты и аналитики</li>
+            <li>Расширенная SEO-оптимизация</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Выбрать пакет</a>
+        </article>
+
+        <article class="card pricing-card reveal">
+          <h3>Индивидуально</h3>
+          <p class="price">по запросу</p>
+          <p class="pricing-desc">Сложные проекты и долгосрочная поддержка</p>
+          <ul class="check-list">
+            <li>Нестандартный функционал</li>
+            <li>Выделенная команда</li>
+            <li>SLA на поддержку</li>
+            <li>Постоянное продвижение</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-block">Обсудить проект</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Вопросы и ответы</p>
+        <h2>Частые вопросы о работе с ЮВИ</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>Сколько времени занимает создание сайта?</summary>
+          <p>Лендинг обычно готов за 1–2 недели, корпоративный сайт или магазин — от 3 до 6 недель в зависимости от объёма.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Что нужно от меня для старта проекта?</summary>
+          <p>Достаточно рассказать о бизнесе и целях сайта на брифинге. Тексты и материалы поможем подготовить или доработать.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Занимаетесь ли вы поддержкой после запуска?</summary>
+          <p>Да, предлагаем пакеты технической поддержки и SEO-продвижения на регулярной основе.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Можно ли доработать готовый сайт?</summary>
+          <p>Да, мы дорабатываем и модернизируем существующие сайты — от редизайна до добавления новых функций.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy reveal">
+        <p class="eyebrow">Контакты</p>
+        <h2>Готовы обсудить ваш сайт?</h2>
+        <p class="section-lead">Оставьте заявку — мы свяжемся с вами в течение рабочего дня и предложим план запуска.</p>
+
+        <ul class="contact-info">
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:hello@yuvi-studio.example">hello@yuvi-studio.example</a>
+          </li>
+          <li>
+            <span class="contact-label">Телефон</span>
+            <a href="tel:+10000000000">+1 (000) 000-00-00</a>
+          </li>
+          <li>
+            <span class="contact-label">Адрес</span>
+            <span>Укажите ваш город / офис</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
+        </div>
+        <div class="form-row">
+          <label for="contact-value">Email или телефон</label>
+          <input type="text" id="contact-value" name="contact" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="message">О проекте</label>
+          <textarea id="message" name="message" rows="4" placeholder="Кратко опишите задачу"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#top" class="brand" aria-label="ЮВИ — на главную">
+      <span class="brand-badge brand-badge-sm" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="28" height="28">
+          <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#gradFooter)"/>
+          <defs>
+            <linearGradient id="gradFooter" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#4f5bff"/>
+              <stop offset="1" stop-color="#22d3ee"/>
+            </linearGradient>
+          </defs>
+          <rect x="14" y="20" width="36" height="30" rx="10" fill="#fff"/>
+          <circle cx="25" cy="34" r="5" fill="#4f5bff"/>
+          <circle cx="39" cy="34" r="5" fill="#22d3ee"/>
+        </svg>
+      </span>
+      <span class="brand-name">ЮВИ</span>
+    </a>
+    <p class="footer-note">© <span id="year"></span> ЮВИ. Создание и продвижение сайтов.</p>
+    <ul class="footer-links">
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#pricing">Цены</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
