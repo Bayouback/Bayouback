@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- TODO: замените домен на свой, когда купите -->
+<title data-ru="ЮВИ — студия разработки сайтов" data-en="YUVI — web development studio">ЮВИ — студия разработки сайтов</title>
+<meta name="description" content="ЮВИ — студия полного цикла: дизайн, разработка и поддержка сайтов. Лендинги, корпоративные сайты, интернет-магазины.">
+<meta name="theme-color" content="#FFFFFF">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ЮВИ — студия разработки сайтов">
+<meta property="og:description" content="Дизайн, разработка и поддержка сайтов. От идеи до запуска за 2–4 недели.">
+<meta property="og:image" content="assets/img/robot-mark.svg">
+<meta property="og:locale" content="ru_RU">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script>document.documentElement.classList.replace('no-js','js');</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-ru="Перейти к содержимому" data-en="Skip to content">Перейти к содержимому</a>
+
+<!-- ============ РЕАКТИВНЫЙ ФОН ============ -->
+<div class="fx" aria-hidden="true">
+  <canvas class="fx__canvas" id="fxCanvas"></canvas>
+  <div class="fx__rules">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</div>
+
+<!-- ============ ШАПКА ============ -->
+<header class="header" id="header">
+  <div class="shell header__inner">
+    <a class="logo" href="#top" aria-label="ЮВИ — на главную">
+      <img class="logo__mark" src="assets/img/robot-mark.svg" alt="" width="40" height="40">
+      <span class="logo__word" data-ru="ЮВИ" data-en="YUVI">ЮВИ</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#services" data-ru="Услуги" data-en="Services">Услуги</a>
+      <a href="#work" data-ru="Работы" data-en="Work">Работы</a>
+      <a href="#process" data-ru="Процесс" data-en="Process">Процесс</a>
+      <a href="#contact" data-ru="Контакты" data-en="Contact">Контакты</a>
+    </nav>
+
+    <div class="header__side">
+      <div class="lang" role="group" aria-label="Язык сайта / Site language">
+        <button type="button" class="lang__btn is-active" data-lang="ru" aria-pressed="true">RU</button>
+        <span class="lang__sep" aria-hidden="true">/</span>
+        <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn--solid header__cta" href="#contact" data-ru="Обсудить проект" data-en="Start a project">Обсудить проект</a>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Открыть меню">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ МОБИЛЬНОЕ МЕНЮ ============ -->
+<div class="mmenu" id="mobileMenu" hidden>
+  <nav class="mmenu__nav" aria-label="Мобильная навигация">
+    <a href="#services"><i>01</i><span data-ru="Услуги" data-en="Services">Услуги</span></a>
+    <a href="#work"><i>02</i><span data-ru="Работы" data-en="Work">Работы</span></a>
+    <a href="#process"><i>03</i><span data-ru="Процесс" data-en="Process">Процесс</span></a>
+    <a href="#contact"><i>04</i><span data-ru="Контакты" data-en="Contact">Контакты</span></a>
+  </nav>
+</div>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ ПЕРВЫЙ ЭКРАН: РЕВЕАЛ ============ -->
+<section class="hero" id="hero">
+
+  <!-- Слой 1. «Скучный сайт». Декоративный, скрыт от скринридеров. -->
+  <div class="plain" aria-hidden="true">
+    <div class="plain__inner">
+      <p class="plain__crumbs" data-ru="Главная &gt; Разработка сайтов &gt; Услуги" data-en="Home &gt; Web development &gt; Services">Главная &gt; Разработка сайтов &gt; Услуги</p>
+      <h2 class="plain__title" data-ru="Добро пожаловать на наш сайт!" data-en="Welcome to our website!">Добро пожаловать на наш сайт!</h2>
+      <hr>
+      <p class="plain__text" data-ru="ООО «ЮВИ» осуществляет деятельность в сфере создания сайтов под ключ. Недорого. Быстро. Качественно. Работаем с 2019 года. Звоните!" data-en="YUVI LLC carries out activities in the field of turnkey website creation. Cheap. Fast. Quality. Working since 2019. Call us!">ООО «ЮВИ» осуществляет деятельность в сфере создания сайтов под ключ. Недорого. Быстро. Качественно. Работаем с 2019 года. Звоните!</p>
+      <p class="plain__links">
+        <a href="#hero" tabindex="-1" data-ru="Главная" data-en="Home">Главная</a> |
+        <a href="#hero" tabindex="-1" data-ru="О компании" data-en="About us">О компании</a> |
+        <a href="#hero" tabindex="-1" data-ru="Услуги" data-en="Services">Услуги</a> |
+        <a href="#hero" tabindex="-1" data-ru="Прайс-лист" data-en="Price list">Прайс-лист</a> |
+        <a href="#hero" tabindex="-1" data-ru="Гостевая книга" data-en="Guestbook">Гостевая книга</a> |
+        <a href="#hero" tabindex="-1" data-ru="Контакты" data-en="Contacts">Контакты</a>
+      </p>
+      <div class="plain__banner" data-ru="БАННЕР 468 × 60" data-en="BANNER 468 × 60">БАННЕР&nbsp;468&nbsp;×&nbsp;60</div>
+      <table class="plain__table">
+        <tr><td data-ru="Разработка сайта" data-en="Website development">Разработка сайта</td><td data-ru="от 10 000 руб." data-en="from 10 000 rub.">от 10 000 руб.</td></tr>
+        <tr><td data-ru="Продвижение" data-en="Promotion">Продвижение</td><td data-ru="договорная" data-en="negotiable">договорная</td></tr>
+        <tr><td data-ru="Хостинг в подарок" data-en="Free hosting">Хостинг в подарок</td><td data-ru="ДА" data-en="YES">ДА</td></tr>
+      </table>
+      <p class="plain__btns">
+        <button type="button" tabindex="-1" data-ru="Отправить заявку" data-en="Send request">Отправить заявку</button>
+        <button type="button" tabindex="-1" data-ru="Скачать прайс.doc" data-en="Download price.doc">Скачать прайс.doc</button>
+      </p>
+      <hr>
+      <p class="plain__counter" data-ru="Счётчик посещений: 0 0 0 2 4 1  |  Сайт лучше смотреть в Internet Explorer 6.0 при разрешении 1024×768" data-en="Visitor counter: 0 0 0 2 4 1  |  Best viewed in Internet Explorer 6.0 at 1024×768">Счётчик посещений: 0&nbsp;0&nbsp;0&nbsp;2&nbsp;4&nbsp;1 &nbsp;|&nbsp; Сайт лучше смотреть в Internet Explorer 6.0 при разрешении 1024×768</p>
+    </div>
+  </div>
+
+  <!-- Слой 2. Настоящий дизайн. Проступает под курсором. -->
+  <div class="crafted" id="crafted">
+    <div class="shell crafted__grid">
+
+      <div class="crafted__copy">
+        <p class="eyebrow"><i>00</i><span data-ru="Студия разработки сайтов" data-en="Web development studio">Студия разработки сайтов</span></p>
+        <h1 class="display">
+          <span data-ru="Создаём сайты," data-en="We build sites">Создаём сайты,</span>
+          <span class="display__accent" data-ru="которые работают" data-en="that actually work">которые работают</span>
+        </h1>
+        <p class="lead" data-ru="ЮВИ — студия полного цикла. Берём задачу на входе и отдаём работающий сайт на выходе: исследование, прототип, дизайн, разработка, запуск и поддержка." data-en="YUVI is a full-cycle studio. We take the brief and hand back a working website: research, prototype, design, development, launch and support.">ЮВИ — студия полного цикла. Берём задачу на входе и отдаём работающий сайт на выходе: исследование, прототип, дизайн, разработка, запуск и поддержка.</p>
+
+        <p class="hero__actions">
+          <a class="btn btn--solid" href="#contact" data-ru="Обсудить проект" data-en="Start a project">Обсудить проект</a>
+          <a class="btn btn--ghost" href="#work" data-ru="Смотреть работы" data-en="View work">Смотреть работы</a>
+        </p>
+
+        <dl class="stats">
+          <!-- TODO: замените цифры на реальные -->
+          <div><dt>48</dt><dd data-ru="проектов запущено" data-en="projects launched">проектов запущено</dd></div>
+          <div><dt>5</dt><dd data-ru="лет на рынке" data-en="years in business">лет на рынке</dd></div>
+          <div><dt>14</dt><dd data-ru="дней средний срок" data-en="days average delivery">дней средний срок</dd></div>
+        </dl>
+      </div>
+
+      <div class="crafted__robot">
+        <!-- Робот. Воссоздан геометрией из вашего референса. -->
+        <svg class="robot" id="robot" viewBox="0 0 260 330" role="img" aria-label="Робот — талисман студии ЮВИ">
+          <defs>
+            <radialGradient id="glass" cx="38%" cy="28%" r="78%">
+              <stop offset="0" stop-color="#F2F8FF"/>
+              <stop offset=".55" stop-color="#DCEBFD"/>
+              <stop offset="1" stop-color="#BBD8F7"/>
+            </radialGradient>
+            <linearGradient id="brain" x1="0" y1="0" x2=".3" y2="1">
+              <stop offset="0" stop-color="#A8D2FF"/>
+              <stop offset="1" stop-color="#3E8BFF"/>
+            </linearGradient>
+            <linearGradient id="shell" x1="0" y1="0" x2=".4" y2="1">
+              <stop offset="0" stop-color="#FFFFFF"/>
+              <stop offset="1" stop-color="#EDEFF3"/>
+            </linearGradient>
+            <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="7" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <ellipse cx="130" cy="312" rx="74" ry="10" fill="#0B0B0C" opacity=".08"/>
+
+          <!-- ноги -->
+          <g stroke="#0B0B0C" stroke-width="3">
+            <rect x="92" y="238" width="26" height="52" rx="13" fill="url(#shell)"/>
+            <rect x="142" y="238" width="26" height="52" rx="13" fill="url(#shell)"/>
+            <rect x="80" y="282" width="44" height="22" rx="10" fill="#16181D"/>
+            <rect x="136" y="282" width="44" height="22" rx="10" fill="#16181D"/>
+          </g>
+
+          <!-- руки-гофры -->
+          <g class="robot__arms" stroke="#0B0B0C" stroke-width="2.5" fill="url(#shell)">
+            <rect x="34" y="176" width="26" height="13" rx="6.5"/>
+            <rect x="34" y="192" width="26" height="13" rx="6.5"/>
+            <rect x="34" y="208" width="26" height="13" rx="6.5"/>
+            <rect x="34" y="224" width="26" height="13" rx="6.5"/>
+            <rect x="200" y="176" width="26" height="13" rx="6.5"/>
+            <rect x="200" y="192" width="26" height="13" rx="6.5"/>
+            <rect x="200" y="208" width="26" height="13" rx="6.5"/>
+            <rect x="200" y="224" width="26" height="13" rx="6.5"/>
+          </g>
+
+          <!-- корпус -->
+          <rect x="76" y="186" width="108" height="72" rx="30" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <rect x="114" y="212" width="32" height="12" rx="6" fill="#C9D8EA" stroke="#0B0B0C" stroke-width="2"/>
+
+          <!-- антенна -->
+          <path d="M130 44v-8" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="130" cy="28" r="10" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+
+          <!-- голова -->
+          <circle cx="130" cy="126" r="78" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <!-- стеклянный купол -->
+          <circle cx="136" cy="122" r="63" fill="url(#glass)" stroke="#0B0B0C" stroke-width="3"/>
+
+          <!-- мозг-облако -->
+          <g class="robot__brain" fill="url(#brain)" filter="url(#glow)" opacity=".92">
+            <circle cx="118" cy="98" r="23"/>
+            <circle cx="150" cy="94" r="21"/>
+            <circle cx="134" cy="80" r="18"/>
+            <circle cx="168" cy="110" r="15"/>
+            <circle cx="104" cy="114" r="15"/>
+            <circle cx="140" cy="112" r="17"/>
+          </g>
+
+          <!-- глаза -->
+          <g id="robotEyes" class="robot__eyes">
+            <g class="robot__blink">
+              <rect x="-11" y="-6" width="22" height="12" rx="6" fill="#101216" transform="translate(116 148) rotate(-12)"/>
+              <rect x="-11" y="-6" width="22" height="12" rx="6" fill="#101216" transform="translate(158 148) rotate(12)"/>
+            </g>
+          </g>
+          <rect x="126" y="168" width="24" height="8" rx="4" fill="#9FB6CE"/>
+
+          <!-- блик -->
+          <ellipse cx="106" cy="86" rx="15" ry="8" fill="#FFFFFF" opacity=".65" transform="rotate(-34 106 86)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подсказка и прогресс «починки» -->
+  <div class="reveal" id="reveal">
+    <p class="reveal__hint">
+      <span class="reveal__dot" aria-hidden="true"></span>
+      <span data-ru="Поводите мышью — верните сайту дизайн" data-en="Move your mouse — restore the design">Поводите мышью — верните сайту дизайн</span>
+    </p>
+    <div class="reveal__bar"><i id="revealBar"></i></div>
+    <p class="reveal__pct"><span id="revealPct">0</span>%&nbsp;<span data-ru="исправлено" data-en="restored">исправлено</span></p>
+    <button type="button" class="reveal__skip" id="revealSkip" data-ru="Показать сразу" data-en="Reveal now">Показать сразу</button>
+  </div>
+</section>
+
+<!-- ============ ТИКЕР ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="tickerTrack">
+    <span data-ru="Лендинги" data-en="Landing pages">Лендинги</span><b>◆</b>
+    <span data-ru="Корпоративные сайты" data-en="Corporate sites">Корпоративные сайты</span><b>◆</b>
+    <span data-ru="Интернет-магазины" data-en="Online stores">Интернет-магазины</span><b>◆</b>
+    <span data-ru="Редизайн" data-en="Redesign">Редизайн</span><b>◆</b>
+    <span data-ru="Поддержка" data-en="Support">Поддержка</span><b>◆</b>
+    <span data-ru="Аналитика" data-en="Analytics">Аналитика</span><b>◆</b>
+  </div>
+</div>
+
+<!-- ============ 01 УСЛУГИ ============ -->
+<section class="section" id="services">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow"><i>01</i><span data-ru="Услуги и цены" data-en="Services & pricing">Услуги и цены</span></p>
+      <h2 class="h2" data-ru="Что мы делаем" data-en="What we do">Что мы делаем</h2>
+      <p class="section__note" data-ru="Фиксированная смета до старта. Цены указаны как ориентир — точную считаем после брифа." data-en="Fixed estimate before we start. Prices are a guide — the exact figure comes after the brief.">Фиксированная смета до старта. Цены указаны как ориентир — точную считаем после брифа.</p>
+    </header>
+
+    <!-- TODO: замените услуги и цены на свои -->
+    <div class="cards">
+      <article class="card reveal-up">
+        <p class="card__num">01</p>
+        <h3 class="card__title" data-ru="Лендинг" data-en="Landing page">Лендинг</h3>
+        <p class="card__text" data-ru="Одна страница под одну задачу: заявка, регистрация, продажа." data-en="One page, one job: a lead, a signup, a sale.">Одна страница под одну задачу: заявка, регистрация, продажа.</p>
+        <ul class="card__list">
+          <li data-ru="Прототип и тексты" data-en="Prototype and copy">Прототип и тексты</li>
+          <li data-ru="Уникальный дизайн" data-en="Custom design">Уникальный дизайн</li>
+          <li data-ru="Адаптив под все экраны" data-en="Responsive on all screens">Адаптив под все экраны</li>
+          <li data-ru="Аналитика и цели" data-en="Analytics and goals">Аналитика и цели</li>
+        </ul>
+        <p class="card__price"><small data-ru="от" data-en="from">от</small> 45 000 ₽</p>
+      </article>
+
+      <article class="card reveal-up">
+        <p class="card__num">02</p>
+        <h3 class="card__title" data-ru="Корпоративный сайт" data-en="Corporate website">Корпоративный сайт</h3>
+        <p class="card__text" data-ru="Многостраничный сайт компании с понятной структурой и админкой." data-en="A multi-page company site with a clear structure and a CMS.">Многостраничный сайт компании с понятной структурой и админкой.</p>
+        <ul class="card__list">
+          <li data-ru="До 10 страниц" data-en="Up to 10 pages">До 10 страниц</li>
+          <li data-ru="Система управления" data-en="Content management">Система управления</li>
+          <li data-ru="Каталог услуг" data-en="Service catalogue">Каталог услуг</li>
+          <li data-ru="Формы заявок" data-en="Lead forms">Формы заявок</li>
+        </ul>
+        <p class="card__price"><small data-ru="от" data-en="from">от</small> 120 000 ₽</p>
+      </article>
+
+      <article class="card reveal-up">
+        <p class="card__num">03</p>
+        <h3 class="card__title" data-ru="Интернет-магазин" data-en="Online store">Интернет-магазин</h3>
+        <p class="card__text" data-ru="Каталог, корзина, оплата и связь со складом." data-en="Catalogue, cart, payments and stock sync.">Каталог, корзина, оплата и связь со складом.</p>
+        <ul class="card__list">
+          <li data-ru="Каталог и фильтры" data-en="Catalogue and filters">Каталог и фильтры</li>
+          <li data-ru="Онлайн-оплата" data-en="Online payments">Онлайн-оплата</li>
+          <li data-ru="Интеграция с 1С" data-en="ERP integration">Интеграция с 1С</li>
+          <li data-ru="Личный кабинет" data-en="Customer accounts">Личный кабинет</li>
+        </ul>
+        <p class="card__price"><small data-ru="от" data-en="from">от</small> 250 000 ₽</p>
+      </article>
+
+      <article class="card reveal-up">
+        <p class="card__num">04</p>
+        <h3 class="card__title" data-ru="Редизайн" data-en="Redesign">Редизайн</h3>
+        <p class="card__text" data-ru="Обновляем внешний вид и скорость существующего сайта." data-en="We refresh the look and the speed of an existing site.">Обновляем внешний вид и скорость существующего сайта.</p>
+        <ul class="card__list">
+          <li data-ru="Аудит текущего сайта" data-en="Audit of the current site">Аудит текущего сайта</li>
+          <li data-ru="Новая визуальная система" data-en="New visual system">Новая визуальная система</li>
+          <li data-ru="Оптимизация скорости" data-en="Performance work">Оптимизация скорости</li>
+          <li data-ru="Перенос контента" data-en="Content migration">Перенос контента</li>
+        </ul>
+        <p class="card__price"><small data-ru="от" data-en="from">от</small> 80 000 ₽</p>
+      </article>
+
+      <article class="card reveal-up">
+        <p class="card__num">05</p>
+        <h3 class="card__title" data-ru="Поддержка" data-en="Support">Поддержка</h3>
+        <p class="card__text" data-ru="Ведём сайт после запуска: правки, обновления, мониторинг." data-en="We keep the site healthy after launch: edits, updates, monitoring.">Ведём сайт после запуска: правки, обновления, мониторинг.</p>
+        <ul class="card__list">
+          <li data-ru="Правки контента" data-en="Content edits">Правки контента</li>
+          <li data-ru="Обновления безопасности" data-en="Security updates">Обновления безопасности</li>
+          <li data-ru="Резервные копии" data-en="Backups">Резервные копии</li>
+          <li data-ru="Отчёт раз в месяц" data-en="Monthly report">Отчёт раз в месяц</li>
+        </ul>
+        <p class="card__price"><small data-ru="от" data-en="from">от</small> 15 000 ₽<small>/<span data-ru="мес" data-en="mo">мес</span></small></p>
+      </article>
+
+      <article class="card card--cta reveal-up">
+        <h3 class="card__title" data-ru="Нужно что-то другое?" data-en="Need something else?">Нужно что-то другое?</h3>
+        <p class="card__text" data-ru="Веб-приложение, личный кабинет, интеграция с внутренней системой — опишите задачу, посчитаем." data-en="A web app, a customer portal, an integration with your internal system — describe it and we will scope it.">Веб-приложение, личный кабинет, интеграция с внутренней системой — опишите задачу, посчитаем.</p>
+        <a class="btn btn--ghost" href="#contact" data-ru="Написать нам" data-en="Get in touch">Написать нам</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 РАБОТЫ ============ -->
+<section class="section section--tint" id="work">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow"><i>02</i><span data-ru="Портфолио" data-en="Selected work">Портфолио</span></p>
+      <h2 class="h2" data-ru="Избранные работы" data-en="Selected work">Избранные работы</h2>
+      <p class="section__note" data-ru="Пока это заглушки — замените превью и названия на свои проекты." data-en="These are placeholders — swap the previews and names for your real projects.">Пока это заглушки — замените превью и названия на свои проекты.</p>
+    </header>
+
+    <!-- TODO: замените кейсы и картинки на реальные проекты -->
+    <div class="works">
+      <article class="work reveal-up">
+        <div class="work__media"><img src="assets/img/case-01.svg" alt="" width="400" height="300" loading="lazy"></div>
+        <div class="work__meta">
+          <h3>Аврора</h3>
+          <p data-ru="Корпоративный сайт" data-en="Corporate website">Корпоративный сайт</p>
+          <span>2025</span>
+        </div>
+      </article>
+      <article class="work reveal-up">
+        <div class="work__media"><img src="assets/img/case-02.svg" alt="" width="400" height="300" loading="lazy"></div>
+        <div class="work__meta">
+          <h3>Гексагон</h3>
+          <p data-ru="Интернет-магазин" data-en="Online store">Интернет-магазин</p>
+          <span>2025</span>
+        </div>
+      </article>
+      <article class="work reveal-up">
+        <div class="work__media"><img src="assets/img/case-03.svg" alt="" width="400" height="300" loading="lazy"></div>
+        <div class="work__meta">
+          <h3>Меридиан</h3>
+          <p data-ru="Лендинг" data-en="Landing page">Лендинг</p>
+          <span>2024</span>
+        </div>
+      </article>
+      <article class="work reveal-up">
+        <div class="work__media"><img src="assets/img/case-04.svg" alt="" width="400" height="300" loading="lazy"></div>
+        <div class="work__meta">
+          <h3>Полигон</h3>
+          <p data-ru="Редизайн" data-en="Redesign">Редизайн</p>
+          <span>2024</span>
+        </div>
+      </article>
+      <article class="work reveal-up">
+        <div class="work__media"><img src="assets/img/case-05.svg" alt="" width="400" height="300" loading="lazy"></div>
+        <div class="work__meta">
+          <h3>Контур</h3>
+          <p data-ru="Веб-приложение" data-en="Web application">Веб-приложение</p>
+          <span>2024</span>
+        </div>
+      </article>
+      <article class="work reveal-up">
+        <div class="work__media"><img src="assets/img/case-06.svg" alt="" width="400" height="300" loading="lazy"></div>
+        <div class="work__meta">
+          <h3>Орбита</h3>
+          <p data-ru="Корпоративный сайт" data-en="Corporate website">Корпоративный сайт</p>
+          <span>2023</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 ПРОЦЕСС ============ -->
+<section class="section" id="process">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow"><i>03</i><span data-ru="Процесс работы" data-en="How we work">Процесс работы</span></p>
+      <h2 class="h2" data-ru="Пять шагов до запуска" data-en="Five steps to launch">Пять шагов до запуска</h2>
+      <p class="section__note" data-ru="Каждый этап заканчивается результатом, который вы видите и согласуете." data-en="Every stage ends with something you can see and sign off.">Каждый этап заканчивается результатом, который вы видите и согласуете.</p>
+    </header>
+
+    <ol class="steps">
+      <li class="step reveal-up">
+        <p class="step__num">01</p>
+        <h3 data-ru="Бриф" data-en="Brief">Бриф</h3>
+        <p data-ru="Обсуждаем задачу, аудиторию и сроки. Фиксируем цели письменно, чтобы потом сверяться." data-en="We discuss the task, the audience and the deadline, then write the goals down so we can check against them.">Обсуждаем задачу, аудиторию и сроки. Фиксируем цели письменно, чтобы потом сверяться.</p>
+      </li>
+      <li class="step reveal-up">
+        <p class="step__num">02</p>
+        <h3 data-ru="Прототип" data-en="Prototype">Прототип</h3>
+        <p data-ru="Собираем структуру страниц и логику блоков до отрисовки дизайна — так дешевле менять." data-en="We build the page structure and block logic before any visual design — changes are cheap here.">Собираем структуру страниц и логику блоков до отрисовки дизайна — так дешевле менять.</p>
+      </li>
+      <li class="step reveal-up">
+        <p class="step__num">03</p>
+        <h3 data-ru="Дизайн" data-en="Design">Дизайн</h3>
+        <p data-ru="Рисуем макеты для десктопа и мобильных, согласовываем каждый экран по очереди." data-en="We design desktop and mobile layouts and sign off screen by screen.">Рисуем макеты для десктопа и мобильных, согласовываем каждый экран по очереди.</p>
+      </li>
+      <li class="step reveal-up">
+        <p class="step__num">04</p>
+        <h3 data-ru="Разработка" data-en="Build">Разработка</h3>
+        <p data-ru="Вёрстка, программирование, админка, аналитика. Показываем прогресс на тестовом домене." data-en="Markup, code, CMS, analytics. Progress is visible on a staging domain throughout.">Вёрстка, программирование, админка, аналитика. Показываем прогресс на тестовом домене.</p>
+      </li>
+      <li class="step reveal-up">
+        <p class="step__num">05</p>
+        <h3 data-ru="Запуск" data-en="Launch">Запуск</h3>
+        <p data-ru="Тестируем, переносим на боевой хостинг и передаём вам все доступы и инструкции." data-en="We test, move to production hosting and hand over every credential and how-to.">Тестируем, переносим на боевой хостинг и передаём вам все доступы и инструкции.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 04 КОНТАКТЫ ============ -->
+<section class="section cta" id="contact">
+  <div class="shell">
+    <p class="eyebrow eyebrow--light"><i>04</i><span data-ru="Контакты" data-en="Contact">Контакты</span></p>
+    <h2 class="cta__title" data-ru="Расскажите про задачу" data-en="Tell us about your project">Расскажите про задачу</h2>
+    <p class="cta__lead" data-ru="Ответим в течение рабочего дня, зададим уточняющие вопросы и предложим смету." data-en="We reply within one business day, ask the follow-up questions and send an estimate.">Ответим в течение рабочего дня, зададим уточняющие вопросы и предложим смету.</p>
+
+    <!-- TODO: подставьте свои реальные контакты -->
+    <ul class="contacts">
+      <li><span data-ru="Почта" data-en="Email">Почта</span><a href="mailto:hello@yuvi.studio">hello@yuvi.studio</a></li>
+      <li><span>Telegram</span><a href="https://t.me/yuvi_studio" rel="noopener">@yuvi_studio</a></li>
+      <li><span data-ru="Телефон" data-en="Phone">Телефон</span><a href="tel:+79000000000">+7 900 000-00-00</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ ПОДВАЛ ============ -->
+<footer class="footer">
+  <div class="shell footer__inner">
+    <a class="logo" href="#top" aria-label="ЮВИ — наверх">
+      <img class="logo__mark" src="assets/img/robot-mark.svg" alt="" width="32" height="32">
+      <span class="logo__word" data-ru="ЮВИ" data-en="YUVI">ЮВИ</span>
+    </a>
+    <nav class="footer__nav" aria-label="Навигация в подвале">
+      <a href="#services" data-ru="Услуги" data-en="Services">Услуги</a>
+      <a href="#work" data-ru="Работы" data-en="Work">Работы</a>
+      <a href="#process" data-ru="Процесс" data-en="Process">Процесс</a>
+      <a href="#contact" data-ru="Контакты" data-en="Contact">Контакты</a>
+    </nav>
+    <p class="footer__copy">© <span id="year">2026</span> <span data-ru="ЮВИ. Все права защищены." data-en="YUVI. All rights reserved.">ЮВИ. Все права защищены.</span></p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ЮВИ",
+  "alternateName": "YUVI",
+  "description": "Студия разработки сайтов: дизайн, разработка, поддержка.",
+  "email": "hello@yuvi.studio",
+  "logo": "assets/img/robot-mark.svg"
+}
+</script>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
