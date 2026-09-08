@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" role="img" aria-label="Обложка сайта школы" font-family="'Segoe UI',Roboto,Arial,sans-serif">
+  <rect width="880" height="620" fill="#FDF8EE"/>
+
+  <g>
+    <rect x="40" y="24" width="28" height="28" fill="#B45309"/>
+    <path d="M46 44 54 30l8 14z" fill="#FDF8EE"/>
+    <text x="80" y="44" fill="#2A2118" font-size="14" font-weight="800" letter-spacing="2.6">ШКОЛА</text>
+    <g fill="rgba(42,33,24,.55)" font-size="12">
+      <text x="440" y="41">Сведения</text><text x="520" y="41">Приём</text>
+      <text x="580" y="41">Расписание</text><text x="670" y="41">Новости</text><text x="740" y="41">Контакты</text>
+    </g>
+    <path d="M0 68h880" stroke="rgba(42,33,24,.16)"/>
+  </g>
+
+  <g>
+    <text x="40" y="138" fill="#B45309" font-size="11" letter-spacing="2.4">ПРИЁМ В 10-Й КЛАСС ОТКРЫТ</text>
+    <text x="40" y="196" fill="#2A2118" font-size="38" font-weight="800" letter-spacing="-.4">ШКОЛА, В КОТОРУЮ</text>
+    <text x="40" y="240" fill="#2A2118" font-size="38" font-weight="800" letter-spacing="-.4">ХОЧЕТСЯ ИДТИ</text>
+    <text x="40" y="280" fill="rgba(42,33,24,.62)" font-size="14">Физмат, инженерный и гуманитарный профили.</text>
+    <text x="40" y="302" fill="rgba(42,33,24,.62)" font-size="14">Своя лаборатория и проектные мастерские.</text>
+    <rect x="40" y="330" width="168" height="46" fill="#B45309"/>
+    <text x="60" y="359" fill="#FDF8EE" font-size="13" font-weight="700">Подать заявление</text>
+    <rect x="224" y="330" width="146" height="46" fill="none" stroke="#B45309"/>
+    <text x="244" y="359" fill="#B45309" font-size="13" font-weight="600">День открытых</text>
+  </g>
+
+  <g transform="translate(672 236)">
+    <path d="M-140 60 -8 26v-96L-140 -36z" fill="#FFFFFF" stroke="#2A2118" stroke-width="2"/>
+    <path d="M140 60 8 26v-96L140 -36z" fill="#FFFFFF" stroke="#2A2118" stroke-width="2"/>
+    <path d="M-8 26v-96M8 26v-96" stroke="#2A2118" stroke-width="2"/>
+    <g stroke="rgba(180,83,9,.5)" stroke-width="2">
+      <path d="M-118 -22h84M-118 -2h84M-118 18h56"/><path d="M34 -22h84M34 -2h84M62 18h56"/>
+    </g>
+    <circle cy="-118" r="30" fill="none" stroke="#B45309" stroke-width="2"/>
+    <rect x="-14" y="-132" width="28" height="28" fill="#B45309" transform="rotate(45 0 -118)"/>
+  </g>
+
+  <path d="M0 424h880" stroke="rgba(42,33,24,.16)"/>
+  <g>
+    <text x="40" y="462" fill="rgba(42,33,24,.5)" font-size="11" letter-spacing="2">БЛИЖАЙШАЯ НЕДЕЛЯ</text>
+    <g>
+      <rect x="40" y="480" width="104" height="104" fill="#FFFFFF"/>
+      <text x="56" y="512" fill="#2A2118" font-size="13" font-weight="700">Пн 12</text>
+      <text x="56" y="536" fill="rgba(42,33,24,.55)" font-size="11">Олимпиада</text>
+      <text x="56" y="554" fill="rgba(42,33,24,.55)" font-size="11">по физике</text>
+      <rect x="160" y="480" width="104" height="104" fill="#FFFFFF"/>
+      <text x="176" y="512" fill="#2A2118" font-size="13" font-weight="700">Ср 14</text>
+      <text x="176" y="536" fill="rgba(42,33,24,.55)" font-size="11">Экскурсия</text>
+      <text x="176" y="554" fill="rgba(42,33,24,.55)" font-size="11">в технопарк</text>
+      <rect x="280" y="480" width="104" height="104" fill="#B45309"/>
+      <text x="296" y="512" fill="#FDF8EE" font-size="13" font-weight="700">Сб 17</text>
+      <text x="296" y="536" fill="rgba(253,248,238,.75)" font-size="11">День</text>
+      <text x="296" y="554" fill="rgba(253,248,238,.75)" font-size="11">открытых дверей</text>
+    </g>
+    <g>
+      <text x="470" y="512" fill="#2A2118" font-size="28" font-weight="800">98 %</text>
+      <text x="470" y="536" fill="rgba(42,33,24,.55)" font-size="12">поступают в вуз</text>
+      <text x="650" y="512" fill="#2A2118" font-size="28" font-weight="800">31</text>
+      <text x="650" y="536" fill="rgba(42,33,24,.55)" font-size="12">победитель олимпиад</text>
+    </g>
+  </g>
+</svg>

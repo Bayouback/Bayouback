@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" role="img" aria-label="Обложка сайта стоматологической клиники" font-family="'Segoe UI',Roboto,Arial,sans-serif">
+  <rect width="880" height="620" fill="#0C3A3B"/>
+  <rect y="420" width="880" height="200" fill="#08292A"/>
+
+  <g>
+    <circle cx="54" cy="38" r="14" fill="none" stroke="#2DD4BF" stroke-width="2"/>
+    <circle cx="54" cy="38" r="5" fill="#2DD4BF"/>
+    <text x="82" y="44" fill="#FFFFFF" font-size="14" font-weight="800" letter-spacing="2.6">СТОМАТОЛОГИЯ</text>
+    <g fill="rgba(255,255,255,.5)" font-size="12">
+      <text x="470" y="42">Услуги</text><text x="535" y="42">Врачи</text>
+      <text x="590" y="42">Цены</text><text x="645" y="42">Отзывы</text>
+    </g>
+    <rect x="716" y="24" width="124" height="30" fill="#2DD4BF"/>
+    <text x="738" y="44" fill="#06282A" font-size="12" font-weight="700">Записаться</text>
+    <path d="M0 72h880" stroke="rgba(255,255,255,.14)"/>
+  </g>
+
+  <g>
+    <text x="40" y="146" fill="#2DD4BF" font-size="11" letter-spacing="2.4">ЛЕЧЕНИЕ ВО СНЕ · ДЕТЯМ И ВЗРОСЛЫМ</text>
+    <text x="40" y="206" fill="#FFFFFF" font-size="42" font-weight="800" letter-spacing="-.5">СТОМАТОЛОГИЯ</text>
+    <text x="40" y="252" fill="#2DD4BF" font-size="42" font-weight="800" letter-spacing="-.5">БЕЗ СТРАХА</text>
+    <text x="40" y="292" fill="rgba(255,255,255,.55)" font-size="14">Консультация и снимок — бесплатно.</text>
+    <text x="40" y="314" fill="rgba(255,255,255,.55)" font-size="14">Честный план лечения с ценой сразу.</text>
+    <rect x="40" y="342" width="188" height="46" fill="#FFFFFF"/>
+    <text x="60" y="371" fill="#0C3A3B" font-size="13" font-weight="700">Записаться на приём</text>
+  </g>
+
+  <g transform="translate(674 244)">
+    <circle r="128" fill="rgba(45,212,191,.12)"/>
+    <circle r="128" fill="none" stroke="rgba(45,212,191,.3)"/>
+    <path d="M-58 -62c0-30 26-46 58-46s58 16 58 46c0 34-14 46-20 84-5 32-12 52-24 52s-14-26-14-48-8-30-8-30-8 8-8 30-2 48-14 48-19-20-24-52c-6-38-20-50-20-84z"
+          fill="#FFFFFF" stroke="#06282A" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M-30 -70c10-8 24-10 34-6" stroke="#2DD4BF" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="96" cy="-88" r="22" fill="#2DD4BF"/>
+    <path d="M86 -88l7 8 14-16" stroke="#06282A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <text x="40" y="462" fill="rgba(255,255,255,.45)" font-size="11" letter-spacing="2">ПОПУЛЯРНЫЕ УСЛУГИ</text>
+    <g font-size="14">
+      <text x="40" y="500" fill="#FFFFFF" font-weight="600">Консультация и панорамный снимок</text>
+      <text x="700" y="500" fill="#2DD4BF" font-weight="800">бесплатно</text>
+      <path d="M40 516h800" stroke="rgba(255,255,255,.12)"/>
+      <text x="40" y="548" fill="#FFFFFF" font-weight="600">Профессиональная гигиена</text>
+      <text x="700" y="548" fill="#FFFFFF" font-weight="800">4 500 ₽</text>
+      <path d="M40 564h800" stroke="rgba(255,255,255,.12)"/>
+      <text x="40" y="596" fill="#FFFFFF" font-weight="600">Имплантация под ключ</text>
+      <text x="700" y="596" fill="#FFFFFF" font-weight="800">от 39 000 ₽</text>
+    </g>
+  </g>
+</svg>
