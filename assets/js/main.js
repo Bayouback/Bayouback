@@ -13,8 +13,9 @@
   /* ---------------------------------------------------------
      1. Тикер — дублируем содержимое для бесшовной прокрутки
      --------------------------------------------------------- */
-  var tickerTrack = $('#tickerTrack');
-  if (tickerTrack) tickerTrack.innerHTML += tickerTrack.innerHTML;
+  $$('[data-ticker]').forEach(function (track) {
+    track.innerHTML += track.innerHTML;
+  });
 
   /* ---------------------------------------------------------
      2. Переключение языка RU / EN
@@ -314,6 +315,81 @@
         if (!document.hidden) start();
       });
     }
+  }
+
+  /* ---------------------------------------------------------
+     7b. Фильтр работ по нише
+     --------------------------------------------------------- */
+  var works = $$('#works .work');
+
+  $$('.filter').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var want = btn.dataset.filter;
+
+      $$('.filter').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', String(on));
+      });
+
+      works.forEach(function (card) {
+        card.hidden = want !== 'all' && card.dataset.cat !== want;
+      });
+    });
+  });
+
+  /* ---------------------------------------------------------
+     7c. Парящая геометрия первого экрана
+     --------------------------------------------------------- */
+  var figures = $('#figures');
+
+  if (figures && !reduceMotion && !coarsePointer) {
+    window.addEventListener('pointermove', function (e) {
+      var x = (e.clientX / window.innerWidth - 0.5) * 22;
+      var y = (e.clientY / window.innerHeight - 0.5) * 22;
+      figures.style.setProperty('--px', x.toFixed(1) + 'px');
+      figures.style.setProperty('--py', y.toFixed(1) + 'px');
+    }, { passive: true });
+  }
+
+  /* ---------------------------------------------------------
+     7d. Шкала разделов и линия процесса
+     --------------------------------------------------------- */
+  var railItems = $$('.rail__item');
+  var steps = $('#steps');
+
+  function trackScroll() {
+    // активный раздел — тот, что пересекает верхнюю треть экрана
+    var line = window.innerHeight * 0.34;
+    var active = null;
+
+    railItems.forEach(function (item) {
+      var sec = document.getElementById(item.dataset.sec);
+      if (sec && sec.getBoundingClientRect().top <= line) active = item;
+    });
+
+    railItems.forEach(function (item) {
+      item.classList.toggle('is-active', item === active);
+    });
+
+    if (steps) {
+      // линия над этапами заполняется по мере прохода секции
+      var box = steps.getBoundingClientRect();
+      var span = box.height + window.innerHeight * 0.5;
+      var done = (window.innerHeight * 0.8 - box.top) / span;
+      steps.style.setProperty('--fill', (Math.max(0, Math.min(1, done)) * 100).toFixed(1) + '%');
+    }
+  }
+
+  if (railItems.length || steps) {
+    var trackQueued = false;
+    window.addEventListener('scroll', function () {
+      if (trackQueued) return;
+      trackQueued = true;
+      requestAnimationFrame(function () { trackQueued = false; trackScroll(); });
+    }, { passive: true });
+    window.addEventListener('resize', trackScroll);
+    trackScroll();
   }
 
   /* ---------------------------------------------------------

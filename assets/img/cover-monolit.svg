@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" role="img" aria-label="Обложка сайта строительной компании «Монолит-Строй»" font-family="'Segoe UI',Roboto,Arial,sans-serif">
+  <rect width="880" height="620" fill="#17191C"/>
+
+  <!-- шапка -->
+  <g>
+    <text x="40" y="42" fill="#FFFFFF" font-size="17" font-weight="800" letter-spacing="1.6">МОНОЛИТ·СТРОЙ</text>
+    <g fill="rgba(255,255,255,.5)" font-size="12">
+      <text x="470" y="41">О компании</text><text x="565" y="41">Объекты</text>
+      <text x="640" y="41">Услуги</text><text x="700" y="41">Контакты</text>
+    </g>
+    <rect x="780" y="24" width="60" height="26" fill="#FF6A1F"/>
+    <text x="792" y="41" fill="#17191C" font-size="11" font-weight="700">Звонок</text>
+    <path d="M0 64h880" stroke="rgba(255,255,255,.14)"/>
+  </g>
+
+  <!-- заголовок -->
+  <g>
+    <text x="40" y="150" fill="rgba(255,255,255,.45)" font-size="11" letter-spacing="2.4">ГЕНЕРАЛЬНЫЙ ПОДРЯДЧИК · С 2006 ГОДА</text>
+    <text x="40" y="212" fill="#FFFFFF" font-size="42" font-weight="800" letter-spacing="-.5">ПРОМЫШЛЕННОЕ</text>
+    <text x="40" y="258" fill="#FFFFFF" font-size="42" font-weight="800" letter-spacing="-.5">СТРОИТЕЛЬСТВО</text>
+    <text x="40" y="304" fill="#FF6A1F" font-size="42" font-weight="800" letter-spacing="-.5">ПОД КЛЮЧ</text>
+    <text x="40" y="344" fill="rgba(255,255,255,.5)" font-size="13">Заводы, склады и логистические комплексы</text>
+    <text x="40" y="364" fill="rgba(255,255,255,.5)" font-size="13">от проекта до ввода в эксплуатацию.</text>
+    <rect x="40" y="392" width="184" height="44" fill="#FF6A1F"/>
+    <text x="60" y="420" fill="#17191C" font-size="13" font-weight="700">Рассчитать проект</text>
+    <rect x="238" y="392" width="150" height="44" fill="none" stroke="rgba(255,255,255,.32)"/>
+    <text x="258" y="420" fill="#FFFFFF" font-size="13" font-weight="600">Смотреть объекты</text>
+  </g>
+
+  <!-- ферма и балки -->
+  <g stroke="#FF6A1F" fill="none">
+    <rect x="512" y="116" width="328" height="316" stroke="rgba(255,106,31,.28)"/>
+    <path d="M528 416 578 132 628 416 678 132 728 416 778 132 828 416" stroke-width="2" opacity=".85"/>
+    <path d="M528 416h300M578 132h250" stroke-width="2" opacity=".85"/>
+  </g>
+  <g fill="#FF6A1F">
+    <rect x="512" y="116" width="26" height="26"/>
+    <rect x="814" y="406" width="26" height="26"/>
+  </g>
+  <g stroke="rgba(255,255,255,.22)" fill="none">
+    <circle cx="676" cy="274" r="86"/><circle cx="676" cy="274" r="52"/>
+  </g>
+
+  <!-- показатели -->
+  <path d="M0 470h880" stroke="rgba(255,255,255,.14)"/>
+  <g fill="#FFFFFF">
+    <text x="40" y="536" font-size="30" font-weight="800">180+</text>
+    <text x="320" y="536" font-size="30" font-weight="800">18 лет</text>
+    <text x="600" y="536" font-size="30" font-weight="800">2,4 млн м²</text>
+  </g>
+  <g fill="rgba(255,255,255,.45)" font-size="12">
+    <text x="40" y="562">объектов сдано</text>
+    <text x="320" y="562">на рынке</text>
+    <text x="600" y="562">построено</text>
+  </g>
+  <path d="M290 500v76M570 500v76" stroke="rgba(255,255,255,.14)"/>
+</svg>

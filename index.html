@@ -6,7 +6,7 @@
 
 <!-- TODO: замените домен на свой, когда купите -->
 <title data-ru="ЮВИ — студия разработки сайтов" data-en="YUVI — web development studio">ЮВИ — студия разработки сайтов</title>
-<meta name="description" content="ЮВИ — студия полного цикла: дизайн, разработка и поддержка сайтов. Лендинги, корпоративные сайты, интернет-магазины.">
+<meta name="description" content="ЮВИ — студия полного цикла: дизайн, разработка и поддержка сайтов для строительных компаний, учебных центров и стоматологий.">
 <meta name="theme-color" content="#FFFFFF">
 
 <meta property="og:type" content="website">
@@ -33,6 +33,15 @@
   <div class="fx__rules">
     <span></span><span></span><span></span><span></span><span></span>
   </div>
+</div>
+
+<!-- ============ ШКАЛА РАЗДЕЛОВ ============ -->
+<div class="rail" id="rail" aria-hidden="true">
+  <span class="rail__item is-active" data-sec="hero"><i>00</i><b data-ru="Старт" data-en="Start">Старт</b></span>
+  <span class="rail__item" data-sec="services"><i>01</i><b data-ru="Услуги" data-en="Services">Услуги</b></span>
+  <span class="rail__item" data-sec="work"><i>02</i><b data-ru="Работы" data-en="Work">Работы</b></span>
+  <span class="rail__item" data-sec="process"><i>03</i><b data-ru="Процесс" data-en="Process">Процесс</b></span>
+  <span class="rail__item" data-sec="contact"><i>04</i><b data-ru="Контакты" data-en="Contact">Контакты</b></span>
 </div>
 
 <!-- ============ ШАПКА ============ -->
@@ -112,8 +121,17 @@
 
   <!-- Слой 2. Настоящий дизайн. Проступает под курсором. -->
   <div class="crafted" id="crafted">
-    <div class="shell crafted__grid">
 
+    <!-- парящая геометрия, слегка отзывается на курсор -->
+    <div class="figures" id="figures" aria-hidden="true">
+      <svg class="figure figure--circle" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49" fill="none" stroke="currentColor"/></svg>
+      <svg class="figure figure--square" viewBox="0 0 100 100"><rect x=".5" y=".5" width="99" height="99" fill="none" stroke="currentColor"/></svg>
+      <svg class="figure figure--tri" viewBox="0 0 100 100"><path d="M50 3 97 96H3z" fill="none" stroke="currentColor"/></svg>
+      <svg class="figure figure--hex" viewBox="0 0 100 100"><path d="M50 2 93 27v50L50 102 7 77V27z" fill="none" stroke="currentColor"/></svg>
+      <svg class="figure figure--cross" viewBox="0 0 100 100"><path d="M50 0v100M0 50h100" fill="none" stroke="currentColor"/></svg>
+    </div>
+
+    <div class="shell crafted__grid">
       <div class="crafted__copy">
         <p class="eyebrow"><i>00</i><span data-ru="Студия разработки сайтов" data-en="Web development studio">Студия разработки сайтов</span></p>
         <h1 class="display">
@@ -160,7 +178,6 @@
 
           <ellipse cx="130" cy="312" rx="74" ry="10" fill="#0B0B0C" opacity=".08"/>
 
-          <!-- ноги -->
           <g stroke="#0B0B0C" stroke-width="3">
             <rect x="92" y="238" width="26" height="52" rx="13" fill="url(#shell)"/>
             <rect x="142" y="238" width="26" height="52" rx="13" fill="url(#shell)"/>
@@ -168,7 +185,6 @@
             <rect x="136" y="282" width="44" height="22" rx="10" fill="#16181D"/>
           </g>
 
-          <!-- руки-гофры -->
           <g class="robot__arms" stroke="#0B0B0C" stroke-width="2.5" fill="url(#shell)">
             <rect x="34" y="176" width="26" height="13" rx="6.5"/>
             <rect x="34" y="192" width="26" height="13" rx="6.5"/>
@@ -180,20 +196,15 @@
             <rect x="200" y="224" width="26" height="13" rx="6.5"/>
           </g>
 
-          <!-- корпус -->
           <rect x="76" y="186" width="108" height="72" rx="30" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
           <rect x="114" y="212" width="32" height="12" rx="6" fill="#C9D8EA" stroke="#0B0B0C" stroke-width="2"/>
 
-          <!-- антенна -->
           <path d="M130 44v-8" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
           <circle cx="130" cy="28" r="10" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
 
-          <!-- голова -->
           <circle cx="130" cy="126" r="78" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-          <!-- стеклянный купол -->
           <circle cx="136" cy="122" r="63" fill="url(#glass)" stroke="#0B0B0C" stroke-width="3"/>
 
-          <!-- мозг-облако -->
           <g class="robot__brain" fill="url(#brain)" filter="url(#glow)" opacity=".92">
             <circle cx="118" cy="98" r="23"/>
             <circle cx="150" cy="94" r="21"/>
@@ -203,7 +214,6 @@
             <circle cx="140" cy="112" r="17"/>
           </g>
 
-          <!-- глаза -->
           <g id="robotEyes" class="robot__eyes">
             <g class="robot__blink">
               <rect x="-11" y="-6" width="22" height="12" rx="6" fill="#101216" transform="translate(116 148) rotate(-12)"/>
@@ -212,7 +222,6 @@
           </g>
           <rect x="126" y="168" width="24" height="8" rx="4" fill="#9FB6CE"/>
 
-          <!-- блик -->
           <ellipse cx="106" cy="86" rx="15" ry="8" fill="#FFFFFF" opacity=".65" transform="rotate(-34 106 86)"/>
         </svg>
       </div>
@@ -233,13 +242,24 @@
 
 <!-- ============ ТИКЕР ============ -->
 <div class="ticker" aria-hidden="true">
-  <div class="ticker__track" id="tickerTrack">
-    <span data-ru="Лендинги" data-en="Landing pages">Лендинги</span><b>◆</b>
-    <span data-ru="Корпоративные сайты" data-en="Corporate sites">Корпоративные сайты</span><b>◆</b>
-    <span data-ru="Интернет-магазины" data-en="Online stores">Интернет-магазины</span><b>◆</b>
-    <span data-ru="Редизайн" data-en="Redesign">Редизайн</span><b>◆</b>
-    <span data-ru="Поддержка" data-en="Support">Поддержка</span><b>◆</b>
-    <span data-ru="Аналитика" data-en="Analytics">Аналитика</span><b>◆</b>
+  <div class="ticker__row">
+    <div class="ticker__track" data-ticker>
+      <span data-ru="Строительные компании" data-en="Construction firms">Строительные компании</span><b>◆</b>
+      <span data-ru="Учебные центры" data-en="Learning centres">Учебные центры</span><b>◆</b>
+      <span data-ru="Стоматологии" data-en="Dental clinics">Стоматологии</span><b>◆</b>
+      <span data-ru="Застройщики" data-en="Developers">Застройщики</span><b>◆</b>
+      <span data-ru="Школы и лицеи" data-en="Schools">Школы и лицеи</span><b>◆</b>
+    </div>
+  </div>
+  <div class="ticker__row ticker__row--back">
+    <div class="ticker__track" data-ticker>
+      <span data-ru="Лендинги" data-en="Landing pages">Лендинги</span><b>+</b>
+      <span data-ru="Корпоративные сайты" data-en="Corporate sites">Корпоративные сайты</span><b>+</b>
+      <span data-ru="Интернет-магазины" data-en="Online stores">Интернет-магазины</span><b>+</b>
+      <span data-ru="Редизайн" data-en="Redesign">Редизайн</span><b>+</b>
+      <span data-ru="Поддержка" data-en="Support">Поддержка</span><b>+</b>
+      <span data-ru="Аналитика" data-en="Analytics">Аналитика</span><b>+</b>
+    </div>
   </div>
 </div>
 
@@ -253,18 +273,22 @@
     </header>
 
     <!-- TODO: замените услуги и цены на свои -->
-    <div class="cards">
-      <article class="card reveal-up">
-        <p class="card__num">01</p>
-        <h3 class="card__title" data-ru="Лендинг" data-en="Landing page">Лендинг</h3>
-        <p class="card__text" data-ru="Одна страница под одну задачу: заявка, регистрация, продажа." data-en="One page, one job: a lead, a signup, a sale.">Одна страница под одну задачу: заявка, регистрация, продажа.</p>
-        <ul class="card__list">
-          <li data-ru="Прототип и тексты" data-en="Prototype and copy">Прототип и тексты</li>
-          <li data-ru="Уникальный дизайн" data-en="Custom design">Уникальный дизайн</li>
-          <li data-ru="Адаптив под все экраны" data-en="Responsive on all screens">Адаптив под все экраны</li>
-          <li data-ru="Аналитика и цели" data-en="Analytics and goals">Аналитика и цели</li>
-        </ul>
-        <p class="card__price"><small data-ru="от" data-en="from">от</small> 45 000 ₽</p>
+    <div class="cards marks">
+      <article class="card card--wide reveal-up">
+        <div class="card__lead">
+          <p class="card__num">01</p>
+          <h3 class="card__title" data-ru="Лендинг" data-en="Landing page">Лендинг</h3>
+          <p class="card__text" data-ru="Одна страница под одну задачу: заявка, запись, продажа. С неё чаще всего начинают — быстро проверяет спрос и окупается первой." data-en="One page, one job: a lead, a booking, a sale. The usual starting point — it tests demand fast and pays for itself first.">Одна страница под одну задачу: заявка, запись, продажа. С неё чаще всего начинают — быстро проверяет спрос и окупается первой.</p>
+        </div>
+        <div class="card__side">
+          <ul class="card__list">
+            <li data-ru="Прототип и тексты" data-en="Prototype and copy">Прототип и тексты</li>
+            <li data-ru="Уникальный дизайн" data-en="Custom design">Уникальный дизайн</li>
+            <li data-ru="Адаптив под все экраны" data-en="Responsive on all screens">Адаптив под все экраны</li>
+            <li data-ru="Аналитика и цели" data-en="Analytics and goals">Аналитика и цели</li>
+          </ul>
+          <p class="card__price"><small data-ru="от" data-en="from">от</small> 45 000 ₽</p>
+        </div>
       </article>
 
       <article class="card reveal-up">
@@ -320,8 +344,10 @@
       </article>
 
       <article class="card card--cta reveal-up">
-        <h3 class="card__title" data-ru="Нужно что-то другое?" data-en="Need something else?">Нужно что-то другое?</h3>
-        <p class="card__text" data-ru="Веб-приложение, личный кабинет, интеграция с внутренней системой — опишите задачу, посчитаем." data-en="A web app, a customer portal, an integration with your internal system — describe it and we will scope it.">Веб-приложение, личный кабинет, интеграция с внутренней системой — опишите задачу, посчитаем.</p>
+        <div>
+          <h3 class="card__title" data-ru="Нужно что-то другое?" data-en="Need something else?">Нужно что-то другое?</h3>
+          <p class="card__text" data-ru="Веб-приложение, личный кабинет, интеграция с внутренней системой или CRM — опишите задачу, посчитаем срок и смету." data-en="A web app, a customer portal, an integration with your internal system or CRM — describe it and we will scope the time and cost.">Веб-приложение, личный кабинет, интеграция с внутренней системой или CRM — опишите задачу, посчитаем срок и смету.</p>
+        </div>
         <a class="btn btn--ghost" href="#contact" data-ru="Написать нам" data-en="Get in touch">Написать нам</a>
       </article>
     </div>
@@ -331,62 +357,126 @@
 <!-- ============ 02 РАБОТЫ ============ -->
 <section class="section section--tint" id="work">
   <div class="shell">
-    <header class="section__head">
-      <p class="eyebrow"><i>02</i><span data-ru="Портфолио" data-en="Selected work">Портфолио</span></p>
-      <h2 class="h2" data-ru="Избранные работы" data-en="Selected work">Избранные работы</h2>
-      <p class="section__note" data-ru="Пока это заглушки — замените превью и названия на свои проекты." data-en="These are placeholders — swap the previews and names for your real projects.">Пока это заглушки — замените превью и названия на свои проекты.</p>
+    <header class="section__head section__head--split">
+      <div>
+        <p class="eyebrow"><i>02</i><span data-ru="Портфолио" data-en="Selected work">Портфолио</span></p>
+        <h2 class="h2" data-ru="Работы по нишам" data-en="Work by industry">Работы по нишам</h2>
+        <p class="section__note" data-ru="Строительство, образование и стоматология. У каждой ниши свои посетители и свой сценарий — дизайн строим от него, а не от шаблона." data-en="Construction, education and dentistry. Each industry has its own visitors and its own scenario — the design follows that, not a template.">Строительство, образование и стоматология. У каждой ниши свои посетители и свой сценарий — дизайн строим от него, а не от шаблона.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Фильтр работ по нише">
+        <button type="button" class="filter is-active" data-filter="all" aria-pressed="true"><span data-ru="Все" data-en="All">Все</span><i>6</i></button>
+        <button type="button" class="filter" data-filter="build" aria-pressed="false"><span data-ru="Строительство" data-en="Construction">Строительство</span><i>2</i></button>
+        <button type="button" class="filter" data-filter="edu" aria-pressed="false"><span data-ru="Образование" data-en="Education">Образование</span><i>2</i></button>
+        <button type="button" class="filter" data-filter="med" aria-pressed="false"><span data-ru="Стоматология" data-en="Dentistry">Стоматология</span><i>2</i></button>
+      </div>
     </header>
 
-    <!-- TODO: замените кейсы и картинки на реальные проекты -->
-    <div class="works">
-      <article class="work reveal-up">
-        <div class="work__media"><img src="assets/img/case-01.svg" alt="" width="400" height="300" loading="lazy"></div>
+    <!-- TODO: замените названия, описания и обложки на реальные проекты -->
+    <div class="works marks" id="works">
+
+      <article class="work reveal-up" data-cat="build">
+        <div class="work__media">
+          <img src="assets/img/cover-monolit.svg" alt="Обложка сайта строительной компании «Монолит-Строй»" width="880" height="620" loading="lazy">
+          <span class="work__go" aria-hidden="true">→</span>
+        </div>
         <div class="work__meta">
-          <h3>Аврора</h3>
-          <p data-ru="Корпоративный сайт" data-en="Corporate website">Корпоративный сайт</p>
-          <span>2025</span>
+          <p class="work__tag" data-ru="Строительство" data-en="Construction">Строительство</p>
+          <h3 class="work__title">Монолит-Строй</h3>
+          <p class="work__desc" data-ru="Генподрядчик промышленного строительства. Главная задача — показать масштаб сданных объектов и довести инженера заказчика до расчёта проекта." data-en="An industrial general contractor. The job was to show the scale of delivered sites and get the client's engineer to a project estimate.">Генподрядчик промышленного строительства. Главная задача — показать масштаб сданных объектов и довести инженера заказчика до расчёта проекта.</p>
+          <ul class="work__facts">
+            <li data-ru="Корпоративный сайт" data-en="Corporate website">Корпоративный сайт</li>
+            <li data-ru="8 недель" data-en="8 weeks">8 недель</li>
+            <li>2025</li>
+          </ul>
         </div>
       </article>
-      <article class="work reveal-up">
-        <div class="work__media"><img src="assets/img/case-02.svg" alt="" width="400" height="300" loading="lazy"></div>
+
+      <article class="work reveal-up" data-cat="build">
+        <div class="work__media">
+          <img src="assets/img/cover-granit.svg" alt="Обложка сайта застройщика «Гранит Девелопмент»" width="880" height="620" loading="lazy">
+          <span class="work__go" aria-hidden="true">→</span>
+        </div>
         <div class="work__meta">
-          <h3>Гексагон</h3>
-          <p data-ru="Интернет-магазин" data-en="Online store">Интернет-магазин</p>
-          <span>2025</span>
+          <p class="work__tag" data-ru="Строительство" data-en="Construction">Строительство</p>
+          <h3 class="work__title">Гранит Девелопмент</h3>
+          <p class="work__desc" data-ru="Сайт жилого комплекса с подбором квартиры по площади и бюджету, ипотечным калькулятором и фотоотчётом о ходе стройки." data-en="A residential complex site with apartment search by size and budget, a mortgage calculator and a construction progress feed.">Сайт жилого комплекса с подбором квартиры по площади и бюджету, ипотечным калькулятором и фотоотчётом о ходе стройки.</p>
+          <ul class="work__facts">
+            <li data-ru="Каталог и калькулятор" data-en="Catalogue and calculator">Каталог и калькулятор</li>
+            <li data-ru="11 недель" data-en="11 weeks">11 недель</li>
+            <li>2025</li>
+          </ul>
         </div>
       </article>
-      <article class="work reveal-up">
-        <div class="work__media"><img src="assets/img/case-03.svg" alt="" width="400" height="300" loading="lazy"></div>
+
+      <article class="work reveal-up" data-cat="edu">
+        <div class="work__media">
+          <img src="assets/img/cover-vektor.svg" alt="Обложка сайта учебного центра «Вектор»" width="880" height="620" loading="lazy">
+          <span class="work__go" aria-hidden="true">→</span>
+        </div>
         <div class="work__meta">
-          <h3>Меридиан</h3>
-          <p data-ru="Лендинг" data-en="Landing page">Лендинг</p>
-          <span>2024</span>
+          <p class="work__tag" data-ru="Образование" data-en="Education">Образование</p>
+          <h3 class="work__title">Вектор</h3>
+          <p class="work__desc" data-ru="Учебный центр с шестью программами. Собрали витрину курсов, запись на бесплатный урок и личный кабинет студента с прогрессом." data-en="A learning centre with six programmes: a course storefront, free-trial signup and a student area that tracks progress.">Учебный центр с шестью программами. Собрали витрину курсов, запись на бесплатный урок и личный кабинет студента с прогрессом.</p>
+          <ul class="work__facts">
+            <li data-ru="Платформа обучения" data-en="Learning platform">Платформа обучения</li>
+            <li data-ru="14 недель" data-en="14 weeks">14 недель</li>
+            <li>2024</li>
+          </ul>
         </div>
       </article>
-      <article class="work reveal-up">
-        <div class="work__media"><img src="assets/img/case-04.svg" alt="" width="400" height="300" loading="lazy"></div>
+
+      <article class="work reveal-up" data-cat="edu">
+        <div class="work__media">
+          <img src="assets/img/cover-licey.svg" alt="Обложка сайта лицея №14" width="880" height="620" loading="lazy">
+          <span class="work__go" aria-hidden="true">→</span>
+        </div>
         <div class="work__meta">
-          <h3>Полигон</h3>
-          <p data-ru="Редизайн" data-en="Redesign">Редизайн</p>
-          <span>2024</span>
+          <p class="work__tag" data-ru="Образование" data-en="Education">Образование</p>
+          <h3 class="work__title" data-ru="Лицей №14" data-en="Lyceum No. 14">Лицей №14</h3>
+          <p class="work__desc" data-ru="Школьный сайт, который проходит проверку по обязательному разделу «Сведения об образовательной организации» и при этом не выглядит как отчёт." data-en="A school site that passes the mandatory public-disclosure requirements without looking like a compliance report.">Школьный сайт, который проходит проверку по обязательному разделу «Сведения об образовательной организации» и при этом не выглядит как отчёт.</p>
+          <ul class="work__facts">
+            <li data-ru="Сайт школы" data-en="School website">Сайт школы</li>
+            <li data-ru="6 недель" data-en="6 weeks">6 недель</li>
+            <li>2024</li>
+          </ul>
         </div>
       </article>
-      <article class="work reveal-up">
-        <div class="work__media"><img src="assets/img/case-05.svg" alt="" width="400" height="300" loading="lazy"></div>
+
+      <article class="work reveal-up" data-cat="med">
+        <div class="work__media">
+          <img src="assets/img/cover-dental.svg" alt="Обложка сайта стоматологии «Дентал Про»" width="880" height="620" loading="lazy">
+          <span class="work__go" aria-hidden="true">→</span>
+        </div>
         <div class="work__meta">
-          <h3>Контур</h3>
-          <p data-ru="Веб-приложение" data-en="Web application">Веб-приложение</p>
-          <span>2024</span>
+          <p class="work__tag" data-ru="Стоматология" data-en="Dentistry">Стоматология</p>
+          <h3 class="work__title">Дентал Про</h3>
+          <p class="work__desc" data-ru="Клиника, куда идут с тревогой. Спокойный тон, честный прайс без «звёздочек» и запись в два шага — так меньше отказов на первом визите." data-en="Patients arrive anxious, so the tone stays calm, the price list has no asterisks and booking takes two steps — fewer drop-offs before the first visit.">Клиника, куда идут с тревогой. Спокойный тон, честный прайс без «звёздочек» и запись в два шага — так меньше отказов на первом визите.</p>
+          <ul class="work__facts">
+            <li data-ru="Сайт клиники" data-en="Clinic website">Сайт клиники</li>
+            <li data-ru="7 недель" data-en="7 weeks">7 недель</li>
+            <li>2025</li>
+          </ul>
         </div>
       </article>
-      <article class="work reveal-up">
-        <div class="work__media"><img src="assets/img/case-06.svg" alt="" width="400" height="300" loading="lazy"></div>
+
+      <article class="work reveal-up" data-cat="med">
+        <div class="work__media">
+          <img src="assets/img/cover-klyuch.svg" alt="Обложка сайта сети клиник «Белый Ключ»" width="880" height="620" loading="lazy">
+          <span class="work__go" aria-hidden="true">→</span>
+        </div>
         <div class="work__meta">
-          <h3>Орбита</h3>
-          <p data-ru="Корпоративный сайт" data-en="Corporate website">Корпоративный сайт</p>
-          <span>2023</span>
+          <p class="work__tag" data-ru="Стоматология" data-en="Dentistry">Стоматология</p>
+          <h3 class="work__title">Белый Ключ</h3>
+          <p class="work__desc" data-ru="Сеть из двенадцати клиник. Онлайн-запись с выбором врача, филиала и свободного окна, подтверждение в SMS и отмена без звонков." data-en="A twelve-clinic network. Online booking by doctor, branch and open slot, SMS confirmation and cancellation without phone calls.">Сеть из двенадцати клиник. Онлайн-запись с выбором врача, филиала и свободного окна, подтверждение в SMS и отмена без звонков.</p>
+          <ul class="work__facts">
+            <li data-ru="Онлайн-запись" data-en="Online booking">Онлайн-запись</li>
+            <li data-ru="16 недель" data-en="16 weeks">16 недель</li>
+            <li>2023</li>
+          </ul>
         </div>
       </article>
+
     </div>
   </div>
 </section>
@@ -400,7 +490,7 @@
       <p class="section__note" data-ru="Каждый этап заканчивается результатом, который вы видите и согласуете." data-en="Every stage ends with something you can see and sign off.">Каждый этап заканчивается результатом, который вы видите и согласуете.</p>
     </header>
 
-    <ol class="steps">
+    <ol class="steps" id="steps">
       <li class="step reveal-up">
         <p class="step__num">01</p>
         <h3 data-ru="Бриф" data-en="Brief">Бриф</h3>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" role="img" aria-label="Обложка сайта сети клиник «Белый Ключ»" font-family="'Segoe UI',Roboto,Arial,sans-serif">
+  <rect width="880" height="620" fill="#F4FAFA"/>
+
+  <g>
+    <rect x="40" y="24" width="30" height="30" fill="#0E5A5A"/>
+    <path d="M50 46v-14a5 5 0 0 1 10 0v14" stroke="#F4FAFA" stroke-width="3" fill="none"/>
+    <text x="82" y="45" fill="#0B3535" font-size="16" font-weight="800" letter-spacing="1.2">БЕЛЫЙ КЛЮЧ</text>
+    <rect x="236" y="26" width="96" height="26" fill="none" stroke="rgba(11,53,53,.25)"/>
+    <text x="248" y="44" fill="rgba(11,53,53,.65)" font-size="11">Москва ▾</text>
+    <g fill="rgba(11,53,53,.55)" font-size="12">
+      <text x="500" y="43">Клиники</text><text x="575" y="43">Врачи</text><text x="632" y="43">Акции</text>
+    </g>
+    <rect x="710" y="24" width="130" height="30" fill="#0E5A5A"/>
+    <text x="726" y="44" fill="#FFFFFF" font-size="12" font-weight="700">Онлайн-запись</text>
+    <path d="M0 72h880" stroke="rgba(11,53,53,.12)"/>
+  </g>
+
+  <g>
+    <text x="40" y="142" fill="#0E5A5A" font-size="11" letter-spacing="2.4">12 КЛИНИК · РАБОТАЕМ С 2011 ГОДА</text>
+    <text x="40" y="198" fill="#0B3535" font-size="36" font-weight="800" letter-spacing="-.4">ВЫБЕРИТЕ ВРАЧА</text>
+    <text x="40" y="240" fill="#0B3535" font-size="36" font-weight="800" letter-spacing="-.4">И УДОБНОЕ ВРЕМЯ</text>
+    <text x="40" y="278" fill="rgba(11,53,53,.6)" font-size="14">Запись занимает минуту, подтверждение —</text>
+    <text x="40" y="300" fill="rgba(11,53,53,.6)" font-size="14">сразу в SMS. Отмена без звонков.</text>
+  </g>
+
+  <!-- виджет записи -->
+  <g transform="translate(520 108)">
+    <rect width="320" height="278" fill="#FFFFFF"/>
+    <text x="24" y="42" fill="#0B3535" font-size="14" font-weight="700">Свободное время сегодня</text>
+    <g>
+      <rect x="24" y="62" width="80" height="32" fill="#E4F3F3"/><text x="42" y="83" fill="#0E5A5A" font-size="12" font-weight="600">10:30</text>
+      <rect x="120" y="62" width="80" height="32" fill="#E4F3F3"/><text x="138" y="83" fill="#0E5A5A" font-size="12" font-weight="600">12:00</text>
+      <rect x="216" y="62" width="80" height="32" fill="#0E5A5A"/><text x="234" y="83" fill="#FFFFFF" font-size="12" font-weight="700">14:15</text>
+      <rect x="24" y="104" width="80" height="32" fill="#E4F3F3"/><text x="42" y="125" fill="#0E5A5A" font-size="12" font-weight="600">15:45</text>
+      <rect x="120" y="104" width="80" height="32" fill="#E4F3F3"/><text x="138" y="125" fill="#0E5A5A" font-size="12" font-weight="600">17:00</text>
+      <rect x="216" y="104" width="80" height="32" fill="#E4F3F3"/><text x="234" y="125" fill="#0E5A5A" font-size="12" font-weight="600">18:30</text>
+    </g>
+    <path d="M24 158h272" stroke="rgba(11,53,53,.12)"/>
+    <circle cx="46" cy="192" r="20" fill="#D7ECEC"/>
+    <circle cx="46" cy="186" r="7" fill="#0E5A5A"/><path d="M32 206a15 15 0 0 1 28 0z" fill="#0E5A5A"/>
+    <text x="78" y="188" fill="#0B3535" font-size="13" font-weight="700">Кузнецова А. И.</text>
+    <text x="78" y="207" fill="rgba(11,53,53,.55)" font-size="11">Терапевт · стаж 14 лет</text>
+    <rect x="24" y="228" width="272" height="34" fill="#0E5A5A"/>
+    <text x="112" y="250" fill="#FFFFFF" font-size="12" font-weight="700">Подтвердить запись</text>
+  </g>
+
+  <!-- врачи -->
+  <path d="M0 424h880" stroke="rgba(11,53,53,.12)"/>
+  <g>
+    <text x="40" y="462" fill="rgba(11,53,53,.5)" font-size="11" letter-spacing="2">ВРАЧИ СЕТИ</text>
+    <g>
+      <circle cx="76" cy="524" r="36" fill="#DDEFEF"/><circle cx="76" cy="514" r="12" fill="#0E5A5A"/><path d="M52 550a24 24 0 0 1 48 0z" fill="#0E5A5A"/>
+      <circle cx="168" cy="524" r="36" fill="#DDEFEF"/><circle cx="168" cy="514" r="12" fill="#0E5A5A"/><path d="M144 550a24 24 0 0 1 48 0z" fill="#0E5A5A"/>
+      <circle cx="260" cy="524" r="36" fill="#DDEFEF"/><circle cx="260" cy="514" r="12" fill="#0E5A5A"/><path d="M236 550a24 24 0 0 1 48 0z" fill="#0E5A5A"/>
+      <circle cx="352" cy="524" r="36" fill="none" stroke="rgba(11,53,53,.3)" stroke-dasharray="4 4"/>
+      <text x="352" y="530" text-anchor="middle" fill="rgba(11,53,53,.55)" font-size="14" font-weight="700">+41</text>
+    </g>
+    <g>
+      <text x="560" y="516" fill="#0B3535" font-size="28" font-weight="800">4,9</text>
+      <text x="560" y="540" fill="rgba(11,53,53,.55)" font-size="12">средняя оценка врача</text>
+      <text x="740" y="516" fill="#0B3535" font-size="28" font-weight="800">12</text>
+      <text x="740" y="540" fill="rgba(11,53,53,.55)" font-size="12">клиник в городе</text>
+    </g>
+  </g>
+</svg>

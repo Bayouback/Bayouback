@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Превью проекта">
-  <rect width="400" height="300" fill="#FFFFFF"/>
-  <g fill="none" stroke="#0B0B0C" stroke-width="1.5">
-    <path d="M200 40 330 115v150L200 340 70 265V115z" transform="translate(0 -40)"/>
-    <path d="M200 85 288 136v102l-88 51-88-51V136z"/>
-  </g>
-  <path d="M200 120 253 151v62l-53 31-53-31v-62z" fill="#3E8BFF"/>
-</svg>

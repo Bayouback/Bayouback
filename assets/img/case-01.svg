@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Превью проекта">
-  <rect width="400" height="300" fill="#FFFFFF"/>
-  <g fill="none" stroke="#0B0B0C" stroke-width="1.5">
-    <rect x="60" y="50" width="200" height="200"/>
-    <rect x="110" y="100" width="200" height="200"/>
-    <circle cx="200" cy="150" r="70"/>
-  </g>
-  <rect x="140" y="130" width="80" height="80" fill="#3E8BFF"/>
-</svg>

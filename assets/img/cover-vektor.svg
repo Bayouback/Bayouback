@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" role="img" aria-label="Обложка сайта учебного центра «Вектор»" font-family="'Segoe UI',Roboto,Arial,sans-serif">
+  <rect width="880" height="620" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="880" height="446" fill="#F5F5FF"/>
+
+  <g>
+    <g fill="#4F46E5"><path d="M40 26 56 42 40 58z"/></g>
+    <text x="66" y="47" fill="#191933" font-size="17" font-weight="800" letter-spacing="1.4">ВЕКТОР</text>
+    <g fill="rgba(25,25,51,.55)" font-size="12">
+      <text x="450" y="41">Курсы</text><text x="515" y="41">Преподаватели</text>
+      <text x="620" y="41">Отзывы</text><text x="690" y="41">Трудоустройство</text>
+    </g>
+    <path d="M0 68h880" stroke="rgba(25,25,51,.12)"/>
+  </g>
+
+  <g>
+    <text x="40" y="140" fill="#4F46E5" font-size="11" letter-spacing="2.4">ОНЛАЙН · 6 НАПРАВЛЕНИЙ</text>
+    <rect x="36" y="164" width="228" height="38" fill="#FFD84D"/>
+    <text x="40" y="194" fill="#191933" font-size="34" font-weight="800" letter-spacing="-.4">ПРОФЕССИЯ</text>
+    <text x="40" y="240" fill="#191933" font-size="34" font-weight="800" letter-spacing="-.4">ЗА 9 МЕСЯЦЕВ</text>
+    <text x="40" y="278" fill="rgba(25,25,51,.6)" font-size="14">Практика с первой недели, наставник</text>
+    <text x="40" y="300" fill="rgba(25,25,51,.6)" font-size="14">и помощь с резюме после выпуска.</text>
+    <rect x="40" y="328" width="180" height="46" fill="#4F46E5"/>
+    <text x="60" y="357" fill="#FFFFFF" font-size="13" font-weight="700">Выбрать программу</text>
+    <text x="244" y="357" fill="#4F46E5" font-size="13" font-weight="600">Бесплатный урок →</text>
+  </g>
+
+  <!-- диаграмма прогресса -->
+  <g transform="translate(676 232)">
+    <circle r="112" fill="none" stroke="rgba(79,70,229,.16)" stroke-width="22"/>
+    <path d="M0 -112A112 112 0 0 1 97 56" fill="none" stroke="#4F46E5" stroke-width="22" stroke-linecap="round"/>
+    <path d="M0 -112A112 112 0 0 0 -97 56" fill="none" stroke="#FFD84D" stroke-width="22" stroke-linecap="round" opacity=".9"/>
+    <text y="-4" text-anchor="middle" fill="#191933" font-size="34" font-weight="800">92%</text>
+    <text y="22" text-anchor="middle" fill="rgba(25,25,51,.55)" font-size="12">доходят до конца</text>
+  </g>
+
+  <!-- карточки курсов -->
+  <g>
+    <g transform="translate(40 476)">
+      <rect width="248" height="108" fill="#FFFFFF" stroke="rgba(25,25,51,.14)"/>
+      <text x="20" y="34" fill="#191933" font-size="15" font-weight="700">Python-разработка</text>
+      <text x="20" y="56" fill="rgba(25,25,51,.5)" font-size="12">9 месяцев · 4 проекта</text>
+      <rect x="20" y="72" width="208" height="6" fill="rgba(79,70,229,.16)"/>
+      <rect x="20" y="72" width="150" height="6" fill="#4F46E5"/>
+    </g>
+    <g transform="translate(316 476)">
+      <rect width="248" height="108" fill="#FFFFFF" stroke="rgba(25,25,51,.14)"/>
+      <text x="20" y="34" fill="#191933" font-size="15" font-weight="700">Аналитика данных</text>
+      <text x="20" y="56" fill="rgba(25,25,51,.5)" font-size="12">7 месяцев · 6 проектов</text>
+      <rect x="20" y="72" width="208" height="6" fill="rgba(79,70,229,.16)"/>
+      <rect x="20" y="72" width="96" height="6" fill="#4F46E5"/>
+    </g>
+    <g transform="translate(592 476)">
+      <rect width="248" height="108" fill="#191933"/>
+      <text x="20" y="34" fill="#FFFFFF" font-size="15" font-weight="700">Набор открыт</text>
+      <text x="20" y="58" fill="rgba(255,255,255,.6)" font-size="12">Старт потока — 14 октября</text>
+      <rect x="20" y="72" width="86" height="20" fill="#FFD84D"/>
+      <text x="30" y="86" fill="#191933" font-size="11" font-weight="700">−30 %</text>
+    </g>
+  </g>
+</svg>
