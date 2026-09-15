@@ -145,84 +145,98 @@
           <a class="btn btn--ghost" href="#work" data-ru="Смотреть работы" data-en="View work">Смотреть работы</a>
         </p>
 
-        <dl class="stats">
-          <!-- TODO: замените цифры на реальные -->
-          <div><dt>48</dt><dd data-ru="проектов запущено" data-en="projects launched">проектов запущено</dd></div>
-          <div><dt>5</dt><dd data-ru="лет на рынке" data-en="years in business">лет на рынке</dd></div>
-          <div><dt>14</dt><dd data-ru="дней средний срок" data-en="days average delivery">дней средний срок</dd></div>
-        </dl>
+        <ul class="terms">
+          <li>
+            <svg class="terms__fig" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="1" width="22" height="22" fill="none" stroke="currentColor"/></svg>
+            <p data-ru="Фикс-смета до старта" data-en="Fixed quote up front">Фикс-смета до старта</p>
+            <small data-ru="Цена в договоре не растёт по ходу работы" data-en="The contract price does not grow mid-project">Цена в договоре не растёт по ходу работы</small>
+          </li>
+          <li>
+            <svg class="terms__fig" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor"/></svg>
+            <p data-ru="Правки в дизайне без доплат" data-en="Design revisions included">Правки в дизайне без доплат</p>
+            <small data-ru="Согласовываем каждый экран, пока не устроит" data-en="We sign off screen by screen until it fits">Согласовываем каждый экран, пока не устроит</small>
+          </li>
+          <li>
+            <svg class="terms__fig" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 23 23H1z" fill="none" stroke="currentColor"/></svg>
+            <p data-ru="Исходники и доступы — ваши" data-en="You own the code and access">Исходники и доступы — ваши</p>
+            <small data-ru="Передаём всё при запуске, без привязки к нам" data-en="Handed over at launch, no lock-in">Передаём всё при запуске, без привязки к нам</small>
+          </li>
+        </ul>
       </div>
 
       <div class="crafted__robot">
-        <!-- Робот. Воссоздан геометрией из вашего референса. -->
+        <!-- Робот-талисман: парящий корпус, широкий визор. -->
         <svg class="robot" id="robot" viewBox="0 0 260 330" role="img" aria-label="Робот — талисман студии ЮВИ">
           <defs>
-            <radialGradient id="glass" cx="38%" cy="28%" r="78%">
-              <stop offset="0" stop-color="#F2F8FF"/>
-              <stop offset=".55" stop-color="#DCEBFD"/>
-              <stop offset="1" stop-color="#BBD8F7"/>
-            </radialGradient>
-            <linearGradient id="brain" x1="0" y1="0" x2=".3" y2="1">
-              <stop offset="0" stop-color="#A8D2FF"/>
-              <stop offset="1" stop-color="#3E8BFF"/>
-            </linearGradient>
-            <linearGradient id="shell" x1="0" y1="0" x2=".4" y2="1">
+            <linearGradient id="shell" x1=".2" y1="0" x2=".75" y2="1">
               <stop offset="0" stop-color="#FFFFFF"/>
-              <stop offset="1" stop-color="#EDEFF3"/>
+              <stop offset=".55" stop-color="#F4F6F9"/>
+              <stop offset="1" stop-color="#E2E6EC"/>
             </linearGradient>
-            <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-              <feGaussianBlur stdDeviation="7" result="b"/>
+            <linearGradient id="visor" x1=".1" y1="0" x2=".5" y2="1">
+              <stop offset="0" stop-color="#333A48"/>
+              <stop offset=".5" stop-color="#171B23"/>
+              <stop offset="1" stop-color="#0B0D12"/>
+            </linearGradient>
+            <radialGradient id="hover" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#3E8BFF" stop-opacity=".42"/>
+              <stop offset="1" stop-color="#3E8BFF" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="eyeGlow" x="-120%" y="-120%" width="340%" height="340%">
+              <feGaussianBlur stdDeviation="4" result="b"/>
               <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
             </filter>
           </defs>
 
-          <ellipse cx="130" cy="312" rx="74" ry="10" fill="#0B0B0C" opacity=".08"/>
+          <!-- подушка антигравитации -->
+          <ellipse cx="130" cy="296" rx="78" ry="20" fill="url(#hover)"/>
+          <ellipse cx="130" cy="300" rx="44" ry="7" fill="#0B0B0C" opacity=".1"/>
 
-          <g stroke="#0B0B0C" stroke-width="3">
-            <rect x="92" y="238" width="26" height="52" rx="13" fill="url(#shell)"/>
-            <rect x="142" y="238" width="26" height="52" rx="13" fill="url(#shell)"/>
-            <rect x="80" y="282" width="44" height="22" rx="10" fill="#16181D"/>
-            <rect x="136" y="282" width="44" height="22" rx="10" fill="#16181D"/>
+          <!-- отсоединённые ладони -->
+          <g class="robot__arms" stroke="#0B0B0C" stroke-width="3" fill="url(#shell)">
+            <rect x="46" y="192" width="24" height="38" rx="12" transform="rotate(-10 58 211)"/>
+            <rect x="190" y="192" width="24" height="38" rx="12" transform="rotate(10 202 211)"/>
           </g>
 
-          <g class="robot__arms" stroke="#0B0B0C" stroke-width="2.5" fill="url(#shell)">
-            <rect x="34" y="176" width="26" height="13" rx="6.5"/>
-            <rect x="34" y="192" width="26" height="13" rx="6.5"/>
-            <rect x="34" y="208" width="26" height="13" rx="6.5"/>
-            <rect x="34" y="224" width="26" height="13" rx="6.5"/>
-            <rect x="200" y="176" width="26" height="13" rx="6.5"/>
-            <rect x="200" y="192" width="26" height="13" rx="6.5"/>
-            <rect x="200" y="208" width="26" height="13" rx="6.5"/>
-            <rect x="200" y="224" width="26" height="13" rx="6.5"/>
+          <!-- корпус -->
+          <rect x="84" y="178" width="92" height="88" rx="34" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <rect x="104" y="200" width="52" height="32" rx="11" fill="url(#visor)"/>
+          <g fill="#3E8BFF">
+            <rect x="114" y="212" width="8" height="8" rx="2"/>
+            <rect x="126" y="212" width="8" height="8" rx="2" opacity=".6"/>
+            <rect x="138" y="212" width="8" height="8" rx="2" opacity=".3"/>
           </g>
 
-          <rect x="76" y="186" width="108" height="72" rx="30" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-          <rect x="114" y="212" width="32" height="12" rx="6" fill="#C9D8EA" stroke="#0B0B0C" stroke-width="2"/>
-
-          <path d="M130 44v-8" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="130" cy="28" r="10" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-
-          <circle cx="130" cy="126" r="78" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-          <circle cx="136" cy="122" r="63" fill="url(#glass)" stroke="#0B0B0C" stroke-width="3"/>
-
-          <g class="robot__brain" fill="url(#brain)" filter="url(#glow)" opacity=".92">
-            <circle cx="118" cy="98" r="23"/>
-            <circle cx="150" cy="94" r="21"/>
-            <circle cx="134" cy="80" r="18"/>
-            <circle cx="168" cy="110" r="15"/>
-            <circle cx="104" cy="114" r="15"/>
-            <circle cx="140" cy="112" r="17"/>
+          <!-- разрыв: робот висит в воздухе -->
+          <g fill="#3E8BFF">
+            <rect x="126" y="150" width="8" height="8" opacity=".9"/>
+            <rect x="127.5" y="163" width="5" height="5" opacity=".5"/>
+            <rect x="128.5" y="172" width="3" height="3" opacity=".25"/>
           </g>
 
-          <g id="robotEyes" class="robot__eyes">
-            <g class="robot__blink">
-              <rect x="-11" y="-6" width="22" height="12" rx="6" fill="#101216" transform="translate(116 148) rotate(-12)"/>
-              <rect x="-11" y="-6" width="22" height="12" rx="6" fill="#101216" transform="translate(158 148) rotate(12)"/>
+          <!-- антенна -->
+          <path d="M130 40V24" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="130" cy="18" r="9" fill="#3E8BFF"/>
+          <circle cx="127" cy="15" r="3" fill="#FFFFFF" opacity=".55"/>
+
+          <!-- боковые диски -->
+          <circle cx="62" cy="96" r="17" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <circle cx="62" cy="96" r="6" fill="#3E8BFF"/>
+          <circle cx="198" cy="96" r="17" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <circle cx="198" cy="96" r="6" fill="#3E8BFF"/>
+
+          <!-- голова -->
+          <rect x="70" y="42" width="120" height="104" rx="38" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+
+          <!-- визор -->
+          <rect x="84" y="64" width="92" height="60" rx="26" fill="url(#visor)"/>
+          <g id="robotEyes" class="robot__eyes" filter="url(#eyeGlow)">
+            <g class="robot__blink" fill="#6FB4FF">
+              <rect x="102" y="86" width="22" height="16" rx="8"/>
+              <rect x="136" y="86" width="22" height="16" rx="8"/>
             </g>
           </g>
-          <rect x="126" y="168" width="24" height="8" rx="4" fill="#9FB6CE"/>
-
-          <ellipse cx="106" cy="86" rx="15" ry="8" fill="#FFFFFF" opacity=".65" transform="rotate(-34 106 86)"/>
+          <path d="M92 78c10-8 26-11 40-9" stroke="#FFFFFF" stroke-width="5" opacity=".14" fill="none" stroke-linecap="round"/>
         </svg>
       </div>
     </div>
