@@ -476,7 +476,7 @@ button{ font:inherit; color:inherit; }
 .card__price small{ font-family:var(--font-text); font-size:13px; font-weight:400; color:var(--muted); }
 
 .card--cta{
-  grid-column:1 / -1; background:var(--ink); color:#fff;
+  grid-column:span 2; background:var(--ink); color:#fff;
   flex-direction:row; align-items:center; justify-content:space-between; gap:40px;
   padding:40px 28px;
 }
