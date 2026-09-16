@@ -593,7 +593,7 @@ button{ font:inherit; color:inherit; }
 }
 .cta__lead{ margin-top:22px; max-width:52ch; color:rgba(255,255,255,.62); }
 .contacts{
-  margin-top:56px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr));
+  margin-top:56px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
   gap:1px; background:rgba(255,255,255,.16);
   border:1px solid rgba(255,255,255,.16);
 }
