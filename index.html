@@ -165,78 +165,70 @@
       </div>
 
       <div class="crafted__robot">
-        <!-- Робот-талисман: парящий корпус, широкий визор. -->
+        <!-- Робот-талисман: один большой объектив, корпус на катке. -->
         <svg class="robot" id="robot" viewBox="0 0 260 330" role="img" aria-label="Робот — талисман студии ЮВИ">
           <defs>
-            <linearGradient id="shell" x1=".2" y1="0" x2=".75" y2="1">
+            <linearGradient id="shell" x1=".18" y1="0" x2=".78" y2="1">
               <stop offset="0" stop-color="#FFFFFF"/>
-              <stop offset=".55" stop-color="#F4F6F9"/>
-              <stop offset="1" stop-color="#E2E6EC"/>
+              <stop offset=".52" stop-color="#F3F5F9"/>
+              <stop offset="1" stop-color="#DFE3EA"/>
             </linearGradient>
-            <linearGradient id="visor" x1=".1" y1="0" x2=".5" y2="1">
-              <stop offset="0" stop-color="#333A48"/>
-              <stop offset=".5" stop-color="#171B23"/>
-              <stop offset="1" stop-color="#0B0D12"/>
-            </linearGradient>
-            <radialGradient id="hover" cx="50%" cy="50%" r="50%">
-              <stop offset="0" stop-color="#3E8BFF" stop-opacity=".42"/>
-              <stop offset="1" stop-color="#3E8BFF" stop-opacity="0"/>
+            <radialGradient id="lens" cx="36%" cy="30%" r="74%">
+              <stop offset="0" stop-color="#8FC4FF"/>
+              <stop offset=".6" stop-color="#3E8BFF"/>
+              <stop offset="1" stop-color="#17418C"/>
             </radialGradient>
-            <filter id="eyeGlow" x="-120%" y="-120%" width="340%" height="340%">
-              <feGaussianBlur stdDeviation="4" result="b"/>
+            <linearGradient id="band" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#3E8BFF"/><stop offset="1" stop-color="#7FBBFF"/>
+            </linearGradient>
+            <filter id="lensGlow" x="-70%" y="-70%" width="240%" height="240%">
+              <feGaussianBlur stdDeviation="6" result="b"/>
               <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
             </filter>
           </defs>
 
-          <!-- подушка антигравитации -->
-          <ellipse cx="130" cy="296" rx="78" ry="20" fill="url(#hover)"/>
-          <ellipse cx="130" cy="300" rx="44" ry="7" fill="#0B0B0C" opacity=".1"/>
+          <ellipse cx="130" cy="312" rx="66" ry="9" fill="#0B0B0C" opacity=".1"/>
 
-          <!-- отсоединённые ладони -->
+          <!-- каток вместо ног -->
+          <rect x="74" y="266" width="112" height="42" rx="21" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <circle cx="102" cy="287" r="9" fill="#12151B"/>
+          <circle cx="158" cy="287" r="9" fill="#12151B"/>
+          <path d="M120 287h20" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
+
+          <!-- руки -->
           <g class="robot__arms" stroke="#0B0B0C" stroke-width="3" fill="url(#shell)">
-            <rect x="46" y="192" width="24" height="38" rx="12" transform="rotate(-10 58 211)"/>
-            <rect x="190" y="192" width="24" height="38" rx="12" transform="rotate(10 202 211)"/>
+            <rect x="48" y="202" width="24" height="52" rx="12"/>
+            <rect x="188" y="202" width="24" height="52" rx="12"/>
           </g>
 
           <!-- корпус -->
-          <rect x="84" y="178" width="92" height="88" rx="34" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-          <rect x="104" y="200" width="52" height="32" rx="11" fill="url(#visor)"/>
-          <g fill="#3E8BFF">
-            <rect x="114" y="212" width="8" height="8" rx="2"/>
-            <rect x="126" y="212" width="8" height="8" rx="2" opacity=".6"/>
-            <rect x="138" y="212" width="8" height="8" rx="2" opacity=".3"/>
-          </g>
+          <rect x="82" y="192" width="96" height="86" rx="32" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <rect x="96" y="216" width="68" height="12" rx="6" fill="url(#band)"/>
+          <circle cx="130" cy="252" r="10" fill="none" stroke="#0B0B0C" stroke-width="3"/>
 
-          <!-- разрыв: робот висит в воздухе -->
-          <g fill="#3E8BFF">
-            <rect x="126" y="150" width="8" height="8" opacity=".9"/>
-            <rect x="127.5" y="163" width="5" height="5" opacity=".5"/>
-            <rect x="128.5" y="172" width="3" height="3" opacity=".25"/>
-          </g>
+          <!-- лампочка на макушке -->
+          <path d="M130 44v-10" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="130" cy="26" r="9" fill="#3E8BFF" filter="url(#lensGlow)"/>
 
-          <!-- антенна -->
-          <path d="M130 40V24" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="130" cy="18" r="9" fill="#3E8BFF"/>
-          <circle cx="127" cy="15" r="3" fill="#FFFFFF" opacity=".55"/>
-
-          <!-- боковые диски -->
-          <circle cx="62" cy="96" r="17" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-          <circle cx="62" cy="96" r="6" fill="#3E8BFF"/>
-          <circle cx="198" cy="96" r="17" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-          <circle cx="198" cy="96" r="6" fill="#3E8BFF"/>
+          <!-- ушки -->
+          <rect x="34" y="108" width="24" height="52" rx="12" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <rect x="202" y="108" width="24" height="52" rx="12" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
 
           <!-- голова -->
-          <rect x="70" y="42" width="120" height="104" rx="38" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <rect x="52" y="46" width="156" height="142" rx="52" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
 
-          <!-- визор -->
-          <rect x="84" y="64" width="92" height="60" rx="26" fill="url(#visor)"/>
-          <g id="robotEyes" class="robot__eyes" filter="url(#eyeGlow)">
-            <g class="robot__blink" fill="#6FB4FF">
-              <rect x="102" y="86" width="22" height="16" rx="8"/>
-              <rect x="136" y="86" width="22" height="16" rx="8"/>
+          <!-- объектив -->
+          <circle cx="130" cy="116" r="54" fill="#12151B" stroke="#0B0B0C" stroke-width="3"/>
+          <circle cx="130" cy="116" r="44" fill="#0A0D13"/>
+          <g id="robotEyes" class="robot__eyes">
+            <g class="robot__blink">
+              <circle cx="130" cy="116" r="30" fill="url(#lens)"/>
+              <circle cx="130" cy="116" r="13" fill="#08121F"/>
+              <circle cx="118" cy="104" r="8" fill="#FFFFFF" opacity=".92"/>
+              <circle cx="143" cy="130" r="4" fill="#FFFFFF" opacity=".45"/>
             </g>
           </g>
-          <path d="M92 78c10-8 26-11 40-9" stroke="#FFFFFF" stroke-width="5" opacity=".14" fill="none" stroke-linecap="round"/>
+          <path d="M96 84c14-12 34-16 52-11" stroke="#FFFFFF" stroke-width="5" opacity=".4" fill="none" stroke-linecap="round"/>
         </svg>
       </div>
     </div>
@@ -282,9 +274,9 @@
 <section class="section" id="services">
   <div class="shell">
     <header class="section__head">
-      <p class="eyebrow"><i>01</i><span data-ru="Услуги и цены" data-en="Services & pricing">Услуги и цены</span></p>
+      <p class="eyebrow"><i>01</i><span data-ru="Услуги" data-en="Services">Услуги</span></p>
       <h2 class="h2" data-ru="Что мы делаем" data-en="What we do">Что мы делаем</h2>
-      <p class="section__note" data-ru="Фиксированная смета до старта. Цены указаны как ориентир — точную считаем после брифа." data-en="Fixed estimate before we start. Prices are a guide — the exact figure comes after the brief.">Фиксированная смета до старта. Цены указаны как ориентир — точную считаем после брифа.</p>
+      <p class="section__note" data-ru="Смету считаем под задачу и фиксируем в договоре до старта. Расчёт бесплатный, обычно занимает один рабочий день." data-en="We scope the estimate for your task and fix it in the contract before we start. Working it out is free and usually takes one business day.">Смету считаем под задачу и фиксируем в договоре до старта. Расчёт бесплатный, обычно занимает один рабочий день.</p>
     </header>
 
     <!-- TODO: замените услуги и цены на свои -->
@@ -302,7 +294,7 @@
             <li data-ru="Адаптив под все экраны" data-en="Responsive on all screens">Адаптив под все экраны</li>
             <li data-ru="Аналитика и цели" data-en="Analytics and goals">Аналитика и цели</li>
           </ul>
-          <p class="card__price"><small data-ru="от" data-en="from">от</small> 45 000 ₽</p>
+          <p class="card__term"><small data-ru="Срок" data-en="Term">Срок</small><span data-ru="2 недели" data-en="2 weeks">2 недели</span></p>
         </div>
       </article>
 
@@ -316,7 +308,7 @@
           <li data-ru="Каталог услуг" data-en="Service catalogue">Каталог услуг</li>
           <li data-ru="Формы заявок" data-en="Lead forms">Формы заявок</li>
         </ul>
-        <p class="card__price"><small data-ru="от" data-en="from">от</small> 120 000 ₽</p>
+        <p class="card__term"><small data-ru="Срок" data-en="Term">Срок</small><span data-ru="4–6 недель" data-en="4–6 weeks">4–6 недель</span></p>
       </article>
 
       <article class="card reveal-up">
@@ -329,7 +321,7 @@
           <li data-ru="Интеграция с 1С" data-en="ERP integration">Интеграция с 1С</li>
           <li data-ru="Личный кабинет" data-en="Customer accounts">Личный кабинет</li>
         </ul>
-        <p class="card__price"><small data-ru="от" data-en="from">от</small> 250 000 ₽</p>
+        <p class="card__term"><small data-ru="Срок" data-en="Term">Срок</small><span data-ru="8–12 недель" data-en="8–12 weeks">8–12 недель</span></p>
       </article>
 
       <article class="card reveal-up">
@@ -342,7 +334,7 @@
           <li data-ru="Оптимизация скорости" data-en="Performance work">Оптимизация скорости</li>
           <li data-ru="Перенос контента" data-en="Content migration">Перенос контента</li>
         </ul>
-        <p class="card__price"><small data-ru="от" data-en="from">от</small> 80 000 ₽</p>
+        <p class="card__term"><small data-ru="Срок" data-en="Term">Срок</small><span data-ru="3–4 недели" data-en="3–4 weeks">3–4 недели</span></p>
       </article>
 
       <article class="card reveal-up">
@@ -355,7 +347,7 @@
           <li data-ru="Передача живому менеджеру" data-en="Handover to a human">Передача живому менеджеру</li>
           <li data-ru="Связь с CRM и календарём" data-en="CRM and calendar sync">Связь с CRM и календарём</li>
         </ul>
-        <p class="card__price"><small data-ru="от" data-en="from">от</small> 60 000 ₽</p>
+        <p class="card__term"><small data-ru="Срок" data-en="Term">Срок</small><span data-ru="2–3 недели" data-en="2–3 weeks">2–3 недели</span></p>
       </article>
 
       <article class="card reveal-up">
@@ -368,7 +360,7 @@
           <li data-ru="Резервные копии" data-en="Backups">Резервные копии</li>
           <li data-ru="Отчёт раз в месяц" data-en="Monthly report">Отчёт раз в месяц</li>
         </ul>
-        <p class="card__price"><small data-ru="от" data-en="from">от</small> 15 000 ₽<small>/<span data-ru="мес" data-en="mo">мес</span></small></p>
+        <p class="card__term"><small data-ru="Формат" data-en="Format">Формат</small><span data-ru="Ежемесячно" data-en="Monthly">Ежемесячно</span></p>
       </article>
 
       <article class="card card--cta reveal-up">
@@ -560,6 +552,7 @@
       <li><span data-ru="Почта" data-en="Email">Почта</span><a href="mailto:hello@yuvi.studio">hello@yuvi.studio</a></li>
       <li><span>Telegram</span><a href="https://t.me/yuvi_studio" rel="noopener">@yuvi_studio</a></li>
       <li><span data-ru="Телефон" data-en="Phone">Телефон</span><a href="tel:+79000000000">+7 900 000-00-00</a></li>
+      <li><span>Instagram</span><a href="https://instagram.com/yuvi.web" rel="noopener">@yuvi.web</a></li>
     </ul>
   </div>
 </section>
@@ -579,6 +572,7 @@
       <a href="#process" data-ru="Процесс" data-en="Process">Процесс</a>
       <a href="#contact" data-ru="Контакты" data-en="Contact">Контакты</a>
     </nav>
+    <a class="footer__ig" href="https://instagram.com/yuvi.web" rel="noopener">@yuvi.web</a>
     <p class="footer__copy">© <span id="year">2026</span> <span data-ru="ЮВИ. Все права защищены." data-en="YUVI. All rights reserved.">ЮВИ. Все права защищены.</span></p>
   </div>
 </footer>
@@ -591,7 +585,8 @@
   "alternateName": "YUVI",
   "description": "Студия разработки сайтов и чат-ботов: дизайн, разработка, поддержка.",
   "email": "hello@yuvi.studio",
-  "logo": "assets/img/robot-mark.svg"
+  "logo": "assets/img/robot-mark.svg",
+  "sameAs": ["https://instagram.com/yuvi.web"]
 }
 </script>
 

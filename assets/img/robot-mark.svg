@@ -1,35 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ЮВИ">
   <defs>
     <linearGradient id="m-shell" x1=".2" y1="0" x2=".7" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7EAEF"/>
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E8EE"/>
     </linearGradient>
-    <linearGradient id="m-visor" x1="0" y1="0" x2=".4" y2="1">
-      <stop offset="0" stop-color="#2A2F3A"/><stop offset="1" stop-color="#0E1016"/>
-    </linearGradient>
+    <radialGradient id="m-lens" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#7FBBFF"/><stop offset=".62" stop-color="#3E8BFF"/><stop offset="1" stop-color="#1B4FA8"/>
+    </radialGradient>
   </defs>
 
-  <!-- антенна -->
-  <path d="M32 12V8" stroke="#0B0B0C" stroke-width="2.4" stroke-linecap="round"/>
-  <circle cx="32" cy="6" r="3.6" fill="#3E8BFF"/>
+  <!-- лампочка -->
+  <circle cx="32" cy="7" r="3.2" fill="#3E8BFF"/>
+  <path d="M32 10.2v2.4" stroke="#0B0B0C" stroke-width="2.2" stroke-linecap="round"/>
 
-  <!-- боковые диски -->
-  <circle cx="8"  cy="35" r="5.4" fill="url(#m-shell)" stroke="#0B0B0C" stroke-width="2.4"/>
-  <circle cx="56" cy="35" r="5.4" fill="url(#m-shell)" stroke="#0B0B0C" stroke-width="2.4"/>
+  <!-- ушки -->
+  <rect x="3"  y="27" width="7" height="14" rx="3.5" fill="url(#m-shell)" stroke="#0B0B0C" stroke-width="2.2"/>
+  <rect x="54" y="27" width="7" height="14" rx="3.5" fill="url(#m-shell)" stroke="#0B0B0C" stroke-width="2.2"/>
 
   <!-- голова -->
-  <rect x="12" y="13" width="40" height="36" rx="13" fill="url(#m-shell)" stroke="#0B0B0C" stroke-width="2.6"/>
-  <!-- визор -->
-  <rect x="17" y="21" width="30" height="20" rx="9" fill="url(#m-visor)"/>
-  <!-- глаза -->
-  <g fill="#6FB4FF">
-    <rect x="22" y="28" width="7" height="6" rx="3"/>
-    <rect x="35" y="28" width="7" height="6" rx="3"/>
-  </g>
-  <path d="M19 26c3-2.6 8-3.6 12-3" stroke="#FFFFFF" stroke-width="1.6" opacity=".22" fill="none" stroke-linecap="round"/>
+  <rect x="9" y="13" width="46" height="42" rx="16" fill="url(#m-shell)" stroke="#0B0B0C" stroke-width="2.6"/>
 
-  <!-- парящие точки -->
-  <g fill="#3E8BFF">
-    <rect x="30.5" y="52" width="3" height="3" opacity=".85"/>
-    <rect x="30.5" y="57" width="3" height="3" opacity=".4"/>
-  </g>
+  <!-- объектив -->
+  <circle cx="32" cy="34" r="15" fill="#12151B" stroke="#0B0B0C" stroke-width="2"/>
+  <circle cx="32" cy="34" r="10" fill="url(#m-lens)"/>
+  <circle cx="32" cy="34" r="4.4" fill="#0A1626"/>
+  <circle cx="28" cy="30" r="2.6" fill="#FFFFFF" opacity=".9"/>
 </svg>

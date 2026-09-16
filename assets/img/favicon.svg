@@ -1,25 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ЮВИ">
   <defs>
     <linearGradient id="f-shell" x1=".2" y1="0" x2=".7" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7EAEF"/>
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E8EE"/>
     </linearGradient>
-    <linearGradient id="f-visor" x1="0" y1="0" x2=".4" y2="1">
-      <stop offset="0" stop-color="#2A2F3A"/><stop offset="1" stop-color="#0E1016"/>
-    </linearGradient>
+    <radialGradient id="f-lens" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#7FBBFF"/><stop offset=".62" stop-color="#3E8BFF"/><stop offset="1" stop-color="#1B4FA8"/>
+    </radialGradient>
   </defs>
 
   <rect width="64" height="64" fill="#FFFFFF"/>
 
-  <path d="M32 14v-4" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="32" cy="8" r="4" fill="#3E8BFF"/>
-
-  <circle cx="9"  cy="38" r="5.6" fill="url(#f-shell)" stroke="#0B0B0C" stroke-width="3"/>
-  <circle cx="55" cy="38" r="5.6" fill="url(#f-shell)" stroke="#0B0B0C" stroke-width="3"/>
-
-  <rect x="12" y="15" width="40" height="38" rx="14" fill="url(#f-shell)" stroke="#0B0B0C" stroke-width="3"/>
-  <rect x="17" y="24" width="30" height="21" rx="9.5" fill="url(#f-visor)"/>
-  <g fill="#6FB4FF">
-    <rect x="22" y="31" width="7.5" height="6.5" rx="3.25"/>
-    <rect x="34.5" y="31" width="7.5" height="6.5" rx="3.25"/>
-  </g>
+  <circle cx="32" cy="8" r="3.6" fill="#3E8BFF"/>
+  <rect x="2"  y="28" width="8" height="16" rx="4" fill="url(#f-shell)" stroke="#0B0B0C" stroke-width="2.6"/>
+  <rect x="54" y="28" width="8" height="16" rx="4" fill="url(#f-shell)" stroke="#0B0B0C" stroke-width="2.6"/>
+  <rect x="8" y="14" width="48" height="44" rx="17" fill="url(#f-shell)" stroke="#0B0B0C" stroke-width="3"/>
+  <circle cx="32" cy="36" r="16" fill="#12151B" stroke="#0B0B0C" stroke-width="2.2"/>
+  <circle cx="32" cy="36" r="10.6" fill="url(#f-lens)"/>
+  <circle cx="32" cy="36" r="4.6" fill="#0A1626"/>
+  <circle cx="27.8" cy="31.8" r="2.8" fill="#FFFFFF" opacity=".9"/>
 </svg>
