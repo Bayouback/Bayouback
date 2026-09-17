@@ -22,16 +22,19 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.constants import ChatAction
 from telegram.ext import (
     Application,
+    BusinessConnectionHandler,
     CallbackQueryHandler,
     CommandHandler,
     ContextTypes,
     ConversationHandler,
     MessageHandler,
+    TypeHandler,
     filters,
 )
 
 from telegram.warnings import PTBUserWarning
 
+import business
 import content
 import router
 
@@ -188,6 +191,12 @@ async def on_error(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
         )
 
 
+async def business_router(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Пропускает к обработчику только сообщения из Business-переписок."""
+    if update.business_message:
+        await business.on_message(update, context)
+
+
 # -------------------------------------------------------------------- старт
 
 def build_app(token: str) -> Application:
@@ -212,6 +221,12 @@ def build_app(token: str) -> Application:
     app.add_handler(CommandHandler("help", cmd_help))
     app.add_handler(CallbackQueryHandler(on_button))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, on_text))
+
+    # Режим автоответчика внутри личного аккаунта (Telegram Business).
+    # Если аккаунт не подключён, эти обновления просто никогда не приходят.
+    app.add_handler(BusinessConnectionHandler(business.on_connection))
+    app.add_handler(TypeHandler(Update, business_router))
+
     app.add_error_handler(on_error)
     return app
 
