@@ -1,21 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ЮВИ">
   <defs>
     <linearGradient id="f-shell" x1=".2" y1="0" x2=".7" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E8EE"/>
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E2E8EF"/>
     </linearGradient>
-    <radialGradient id="f-lens" cx="38%" cy="32%" r="72%">
-      <stop offset="0" stop-color="#7FBBFF"/><stop offset=".62" stop-color="#3E8BFF"/><stop offset="1" stop-color="#1B4FA8"/>
-    </radialGradient>
+    <linearGradient id="f-visor" x1=".15" y1="0" x2=".6" y2="1">
+      <stop offset="0" stop-color="#5D8493"/><stop offset="1" stop-color="#2E505E"/>
+    </linearGradient>
+    <linearGradient id="f-acc" x1="0" y1="0" x2=".5" y2="1">
+      <stop offset="0" stop-color="#7DA1B0"/><stop offset="1" stop-color="#547886"/>
+    </linearGradient>
   </defs>
 
   <rect width="64" height="64" fill="#FFFFFF"/>
 
-  <circle cx="32" cy="8" r="3.6" fill="#3E8BFF"/>
-  <rect x="2"  y="28" width="8" height="16" rx="4" fill="url(#f-shell)" stroke="#0B0B0C" stroke-width="2.6"/>
-  <rect x="54" y="28" width="8" height="16" rx="4" fill="url(#f-shell)" stroke="#0B0B0C" stroke-width="2.6"/>
-  <rect x="8" y="14" width="48" height="44" rx="17" fill="url(#f-shell)" stroke="#0B0B0C" stroke-width="3"/>
-  <circle cx="32" cy="36" r="16" fill="#12151B" stroke="#0B0B0C" stroke-width="2.2"/>
-  <circle cx="32" cy="36" r="10.6" fill="url(#f-lens)"/>
-  <circle cx="32" cy="36" r="4.6" fill="#0A1626"/>
-  <circle cx="27.8" cy="31.8" r="2.8" fill="#FFFFFF" opacity=".9"/>
+  <rect x="0"  y="26" width="8" height="18" rx="4" fill="url(#f-acc)"/>
+  <rect x="56" y="26" width="8" height="18" rx="4" fill="url(#f-acc)"/>
+  <rect x="6" y="12" width="52" height="46" rx="19" fill="url(#f-shell)"/>
+  <rect x="13" y="19" width="38" height="32" rx="14" fill="url(#f-visor)"/>
+
+  <circle cx="24.5" cy="34" r="7" fill="#1C3D4A" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="39.5" cy="34" r="7" fill="#1C3D4A" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="22" cy="31.4" r="2.1" fill="#FFFFFF"/>
+  <circle cx="37" cy="31.4" r="2.1" fill="#FFFFFF"/>
 </svg>

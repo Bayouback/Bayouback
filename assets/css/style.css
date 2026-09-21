@@ -358,10 +358,13 @@ button{ font:inherit; color:inherit; }
 .crafted__robot{ display:flex; justify-content:center; }
 .robot{ width:100%; max-width:330px; height:auto; }
 .robot__eyes{ transition:transform .18s var(--ease); }
-.robot__blink{ transform-box:fill-box; transform-origin:center; }
+/* Моргание — подмена открытых глаз на прищур со второй картинки-референса,
+   а не сжатие: у круглых глаз сжатие читается как поломка, а не как моргание. */
+.robot__eyes-shut{ opacity:0; }
+.robot.is-blinking .robot__eyes-open{ opacity:0; }
+.robot.is-blinking .robot__eyes-shut{ opacity:1; }
 .robot__arms{ animation:sway 5s ease-in-out infinite; transform-origin:center; }
 @keyframes sway{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-5px) } }
-.robot.is-blinking .robot__blink{ transform:scaleY(.14); }
 .crafted__robot{ animation:float 6s ease-in-out infinite; }
 @keyframes float{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-10px) } }
 

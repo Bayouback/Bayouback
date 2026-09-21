@@ -1,27 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ЮВИ">
   <defs>
     <linearGradient id="m-shell" x1=".2" y1="0" x2=".7" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E8EE"/>
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E2E8EF"/>
     </linearGradient>
-    <radialGradient id="m-lens" cx="38%" cy="32%" r="72%">
-      <stop offset="0" stop-color="#7FBBFF"/><stop offset=".62" stop-color="#3E8BFF"/><stop offset="1" stop-color="#1B4FA8"/>
-    </radialGradient>
+    <linearGradient id="m-visor" x1=".15" y1="0" x2=".6" y2="1">
+      <stop offset="0" stop-color="#5D8493"/><stop offset="1" stop-color="#2E505E"/>
+    </linearGradient>
+    <linearGradient id="m-acc" x1="0" y1="0" x2=".5" y2="1">
+      <stop offset="0" stop-color="#7DA1B0"/><stop offset="1" stop-color="#547886"/>
+    </linearGradient>
   </defs>
 
-  <!-- лампочка -->
-  <circle cx="32" cy="7" r="3.2" fill="#3E8BFF"/>
-  <path d="M32 10.2v2.4" stroke="#0B0B0C" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- антенна -->
+  <path d="M45 13 52 6" stroke="url(#m-acc)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+  <circle cx="54" cy="4.5" r="4" fill="url(#m-acc)"/>
 
   <!-- ушки -->
-  <rect x="3"  y="27" width="7" height="14" rx="3.5" fill="url(#m-shell)" stroke="#0B0B0C" stroke-width="2.2"/>
-  <rect x="54" y="27" width="7" height="14" rx="3.5" fill="url(#m-shell)" stroke="#0B0B0C" stroke-width="2.2"/>
+  <rect x="1"  y="24" width="8" height="17" rx="4" fill="url(#m-acc)"/>
+  <rect x="55" y="24" width="8" height="17" rx="4" fill="url(#m-acc)"/>
 
   <!-- голова -->
-  <rect x="9" y="13" width="46" height="42" rx="16" fill="url(#m-shell)" stroke="#0B0B0C" stroke-width="2.6"/>
+  <rect x="7" y="10" width="50" height="46" rx="19" fill="url(#m-shell)"/>
+  <rect x="14" y="17" width="36" height="32" rx="14" fill="url(#m-visor)"/>
 
-  <!-- объектив -->
-  <circle cx="32" cy="34" r="15" fill="#12151B" stroke="#0B0B0C" stroke-width="2"/>
-  <circle cx="32" cy="34" r="10" fill="url(#m-lens)"/>
-  <circle cx="32" cy="34" r="4.4" fill="#0A1626"/>
-  <circle cx="28" cy="30" r="2.6" fill="#FFFFFF" opacity=".9"/>
+  <!-- глаза -->
+  <circle cx="25" cy="32" r="6.4" fill="#1C3D4A" stroke="#FFFFFF" stroke-width="1.8"/>
+  <circle cx="39" cy="32" r="6.4" fill="#1C3D4A" stroke="#FFFFFF" stroke-width="1.8"/>
+  <circle cx="22.6" cy="29.6" r="1.9" fill="#FFFFFF"/>
+  <circle cx="36.6" cy="29.6" r="1.9" fill="#FFFFFF"/>
+  <path d="M29 40q3 2.6 6 0" stroke="#1C3D4A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 </svg>

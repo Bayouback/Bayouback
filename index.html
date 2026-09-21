@@ -165,70 +165,74 @@
       </div>
 
       <div class="crafted__robot">
-        <!-- Робот-талисман: один большой объектив, корпус на катке. -->
+        <!-- Робот-талисман. Воссоздан по вашим картинкам из reference/robot-*.jpg -->
         <svg class="robot" id="robot" viewBox="0 0 260 330" role="img" aria-label="Робот — талисман студии ЮВИ">
           <defs>
-            <linearGradient id="shell" x1=".18" y1="0" x2=".78" y2="1">
+            <linearGradient id="shell" x1=".2" y1="0" x2=".7" y2="1">
               <stop offset="0" stop-color="#FFFFFF"/>
-              <stop offset=".52" stop-color="#F3F5F9"/>
-              <stop offset="1" stop-color="#DFE3EA"/>
+              <stop offset=".55" stop-color="#F6F8FA"/>
+              <stop offset="1" stop-color="#E2E8EF"/>
             </linearGradient>
-            <radialGradient id="lens" cx="36%" cy="30%" r="74%">
-              <stop offset="0" stop-color="#8FC4FF"/>
-              <stop offset=".6" stop-color="#3E8BFF"/>
-              <stop offset="1" stop-color="#17418C"/>
-            </radialGradient>
-            <linearGradient id="band" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#3E8BFF"/><stop offset="1" stop-color="#7FBBFF"/>
+            <linearGradient id="visor" x1=".15" y1="0" x2=".6" y2="1">
+              <stop offset="0" stop-color="#5D8493"/>
+              <stop offset=".55" stop-color="#456E7E"/>
+              <stop offset="1" stop-color="#2E505E"/>
             </linearGradient>
-            <filter id="lensGlow" x="-70%" y="-70%" width="240%" height="240%">
-              <feGaussianBlur stdDeviation="6" result="b"/>
-              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
+            <linearGradient id="acc" x1="0" y1="0" x2=".5" y2="1">
+              <stop offset="0" stop-color="#7DA1B0"/>
+              <stop offset="1" stop-color="#547886"/>
+            </linearGradient>
           </defs>
 
-          <ellipse cx="130" cy="312" rx="66" ry="9" fill="#0B0B0C" opacity=".1"/>
+          <ellipse cx="130" cy="292" rx="58" ry="8" fill="#2E505E" opacity=".08"/>
 
-          <!-- каток вместо ног -->
-          <rect x="74" y="266" width="112" height="42" rx="21" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-          <circle cx="102" cy="287" r="9" fill="#12151B"/>
-          <circle cx="158" cy="287" r="9" fill="#12151B"/>
-          <path d="M120 287h20" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
+          <!-- антенна -->
+          <path d="M182 60 203 34" stroke="url(#acc)" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <circle cx="207" cy="27" r="14" fill="url(#acc)"/>
+          <circle cx="202" cy="22" r="4.5" fill="#FFFFFF" opacity=".45"/>
 
-          <!-- руки -->
-          <g class="robot__arms" stroke="#0B0B0C" stroke-width="3" fill="url(#shell)">
-            <rect x="48" y="202" width="24" height="52" rx="12"/>
-            <rect x="188" y="202" width="24" height="52" rx="12"/>
+          <!-- руки за корпусом -->
+          <g class="robot__arms" fill="url(#acc)">
+            <rect x="58" y="214" width="31" height="52" rx="15.5"/>
+            <rect x="171" y="214" width="31" height="52" rx="15.5"/>
           </g>
 
           <!-- корпус -->
-          <rect x="82" y="192" width="96" height="86" rx="32" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-          <rect x="96" y="216" width="68" height="12" rx="6" fill="url(#band)"/>
-          <circle cx="130" cy="252" r="10" fill="none" stroke="#0B0B0C" stroke-width="3"/>
-
-          <!-- лампочка на макушке -->
-          <path d="M130 44v-10" stroke="#0B0B0C" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="130" cy="26" r="9" fill="#3E8BFF" filter="url(#lensGlow)"/>
+          <path d="M130 174a42 42 0 0 1 42 42v54a12 12 0 0 1-12 12h-60a12 12 0 0 1-12-12v-54a42 42 0 0 1 42-42z"
+                fill="url(#shell)"/>
+          <!-- сердце на груди -->
+          <path d="M12 21s-8.6-5.6-10.6-10.1A6.1 6.1 0 0 1 12 5.9a6.1 6.1 0 0 1 10.6 5C20.6 15.4 12 21 12 21z"
+                fill="url(#acc)" transform="translate(130 232) scale(1.5) translate(-12 -13)"/>
 
           <!-- ушки -->
-          <rect x="34" y="108" width="24" height="52" rx="12" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
-          <rect x="202" y="108" width="24" height="52" rx="12" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <rect x="30" y="96" width="30" height="52" rx="15" fill="url(#acc)"/>
+          <rect x="200" y="96" width="30" height="52" rx="15" fill="url(#acc)"/>
 
           <!-- голова -->
-          <rect x="52" y="46" width="156" height="142" rx="52" fill="url(#shell)" stroke="#0B0B0C" stroke-width="3"/>
+          <rect x="52" y="44" width="156" height="142" rx="58" fill="url(#shell)"/>
 
-          <!-- объектив -->
-          <circle cx="130" cy="116" r="54" fill="#12151B" stroke="#0B0B0C" stroke-width="3"/>
-          <circle cx="130" cy="116" r="44" fill="#0A0D13"/>
+          <!-- экран-лицо -->
+          <rect x="73" y="66" width="114" height="98" rx="42" fill="url(#visor)"/>
+          <path d="M86 84c14-10 32-13 48-10" stroke="#FFFFFF" stroke-width="6" opacity=".12"
+                fill="none" stroke-linecap="round"/>
+
           <g id="robotEyes" class="robot__eyes">
-            <g class="robot__blink">
-              <circle cx="130" cy="116" r="30" fill="url(#lens)"/>
-              <circle cx="130" cy="116" r="13" fill="#08121F"/>
-              <circle cx="118" cy="104" r="8" fill="#FFFFFF" opacity=".92"/>
-              <circle cx="143" cy="130" r="4" fill="#FFFFFF" opacity=".45"/>
+            <!-- открытые глаза — первая картинка -->
+            <g class="robot__eyes-open">
+              <circle cx="106" cy="112" r="19" fill="#1C3D4A" stroke="#FFFFFF" stroke-width="4.5"/>
+              <circle cx="154" cy="112" r="19" fill="#1C3D4A" stroke="#FFFFFF" stroke-width="4.5"/>
+              <circle cx="99" cy="105" r="5.6" fill="#FFFFFF"/>
+              <circle cx="147" cy="105" r="5.6" fill="#FFFFFF"/>
+              <circle cx="112" cy="120" r="2.4" fill="#FFFFFF" opacity=".75"/>
+              <circle cx="160" cy="120" r="2.4" fill="#FFFFFF" opacity=".75"/>
+              <path d="M121 137q9 8 18 0" stroke="#1C3D4A" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+            </g>
+            <!-- прищуренные — вторая картинка, показываются при моргании -->
+            <g class="robot__eyes-shut">
+              <path d="M92 118q14-19 28 0" stroke="#FFFFFF" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <path d="M140 118q14-19 28 0" stroke="#FFFFFF" stroke-width="7" fill="none" stroke-linecap="round"/>
             </g>
           </g>
-          <path d="M96 84c14-12 34-16 52-11" stroke="#FFFFFF" stroke-width="5" opacity=".4" fill="none" stroke-linecap="round"/>
         </svg>
       </div>
     </div>
