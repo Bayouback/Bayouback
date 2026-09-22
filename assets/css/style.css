@@ -4,9 +4,11 @@
    правильные геометрические фигуры, синий акцент из шлема робота.
    ========================================================= */
 
-@property --rr { syntax: "<length>"; inherits: true; initial-value: 0px; }
-
 :root{
+  /* тайминги открывающей сцены */
+  --sweep-delay: 1.6s;
+  --sweep-ms:    1.5s;
+
   --paper:      #FFFFFF;
   --paper-tint: #F7F8FA;
   --ink:        #0B0B0C;
@@ -227,43 +229,7 @@ button{ font:inherit; color:inherit; }
   overflow:hidden;
   border-bottom:1px solid var(--hairline);
 }
-.hero > .plain,
 .hero > .crafted{ grid-area:1/1; min-width:0; }
-
-/* --- слой «скучный сайт» --- */
-.plain{
-  background:#DCDCDC;
-  font-family:"Times New Roman", Times, serif;
-  color:#000;
-  display:flex; align-items:center;
-  padding:40px var(--gutter);
-}
-.plain__inner{
-  width:100%; max-width:760px; margin-inline:auto;
-  background:#F0F0F0; border:2px inset #9A9A9A;
-  padding:18px 22px;
-}
-.plain__crumbs{ font-size:12px; color:#333; }
-.plain__title{ font-size:30px; font-weight:700; margin:8px 0; color:#000080; }
-.plain hr{ border:0; border-top:2px groove #BBB; margin:12px 0; }
-.plain__text{ font-size:16px; line-height:1.45; }
-.plain__links{ margin:14px 0; font-size:15px; }
-.plain__links a{ color:#0000EE; text-decoration:underline; }
-.plain__banner{
-  margin:14px 0; height:60px; max-width:468px;
-  background:repeating-linear-gradient(45deg,#C8C8C8 0 10px,#BDBDBD 10px 20px);
-  border:1px solid #999;
-  display:flex; align-items:center; justify-content:center;
-  font-size:13px; letter-spacing:.08em; color:#555;
-}
-.plain__table{ border-collapse:collapse; margin:14px 0; font-size:15px; }
-.plain__table td{ border:1px solid #999; padding:5px 12px; }
-.plain__btns{ margin:14px 0; display:flex; gap:10px; flex-wrap:wrap; }
-.plain__btns button{
-  font-family:"Times New Roman",Times,serif; font-size:14px;
-  padding:3px 10px; background:#E0E0E0; border:2px outset #C0C0C0; cursor:default;
-}
-.plain__counter{ font-size:12px; color:#444; }
 
 /* --- слой «настоящий дизайн» --- */
 .crafted{
@@ -271,31 +237,8 @@ button{ font:inherit; color:inherit; }
   display:flex; align-items:center;
   padding:clamp(40px,7vh,80px) 0;
 }
-/* Маску ставит только JS. Без JS дизайн виден сразу. */
-.js .crafted{
-  -webkit-mask-image:radial-gradient(circle var(--rr) at var(--rx,50%) var(--ry,45%), #000 62%, rgba(0,0,0,.35) 82%, transparent 100%);
-  mask-image:radial-gradient(circle var(--rr) at var(--rx,50%) var(--ry,45%), #000 62%, rgba(0,0,0,.35) 82%, transparent 100%);
-}
-.js .hero.is-revealed .crafted{
-  --rr:170vmax;
-  transition:--rr 1s var(--ease);
-}
-/* после раскрытия маска не нужна вовсе */
-.js .hero.is-open .crafted{ -webkit-mask-image:none; mask-image:none; }
-
-/* кольцо-курсор, делает взаимодействие читаемым */
-.js .hero:not(.is-revealed)::after{
-  content:""; position:absolute; z-index:3; pointer-events:none;
-  left:var(--rx,50%); top:var(--ry,45%);
-  width:calc(var(--rr) * 2); height:calc(var(--rr) * 2);
-  margin:calc(var(--rr) * -1) 0 0 calc(var(--rr) * -1);
-  border:1px solid var(--accent);
-  border-radius:50%;
-  opacity:.5;
-}
 
 
-/* --- парящая геометрия первого экрана --- */
 .figures{ position:absolute; inset:0; pointer-events:none; color:var(--accent); }
 .figure{
   position:absolute; opacity:.3;
@@ -368,31 +311,110 @@ button{ font:inherit; color:inherit; }
 .crafted__robot{ animation:float 6s ease-in-out infinite; }
 @keyframes float{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-10px) } }
 
-/* --- подсказка и прогресс --- */
-.reveal{
-  position:absolute; z-index:4; left:var(--gutter); bottom:28px;
-  display:flex; align-items:center; flex-wrap:wrap; gap:14px;
-  background:var(--paper); border:1px solid var(--ink);
-  padding:12px 16px;
-  font-family:var(--font-mono); font-size:12px;
-  transition:opacity .5s var(--ease), transform .5s var(--ease);
+
+/* ============ ОТКРЫВАЮЩАЯ СЦЕНА ============
+   Страница «не прогрузилась»: битые картинки и серые строки. Через пару
+   секунд робот проезжает слева направо и смахивает её — под ней уже
+   готовый сайт. Слой рисует только скрипт: без JS и при отключённой
+   анимации посетитель сразу видит настоящую страницу. */
+
+.broken,
+.sweep{ display:none; }
+.js .broken,
+.js .sweep{ display:block; }
+.js.scene-done .broken,
+.js.scene-done .sweep{ display:none; }
+
+/* Перекрытие на весь экран, а не только на первый: иначе настоящая шапка
+   торчала бы поверх «непрогрузившейся» страницы и получались бы две шапки. */
+.broken{
+  position:fixed; inset:0; z-index:100;
+  background:var(--paper);
+  padding:0 0 40px;
+  overflow:hidden;
+  font-family:var(--font-text);
+  animation:brokenWipe var(--sweep-ms) var(--sweep-delay) cubic-bezier(.62,.03,.3,1) forwards;
 }
-.hero.is-revealed .reveal{ opacity:0; transform:translateY(12px); pointer-events:none; }
-.reveal__hint{ display:flex; align-items:center; gap:10px; }
-.reveal__dot{
-  width:8px; height:8px; background:var(--accent);
-  animation:blip 1.6s ease-in-out infinite;
+@keyframes brokenWipe{
+  from{ clip-path:inset(0 0 0 0) }
+  to  { clip-path:inset(0 0 0 100%) }
 }
-@keyframes blip{ 0%,100%{ opacity:1 } 50%{ opacity:.2 } }
-.reveal__bar{ width:110px; height:4px; background:var(--hairline); }
-.reveal__bar i{ display:block; height:100%; width:0; background:var(--accent); transition:width .2s linear; }
-.reveal__pct{ color:var(--muted); min-width:96px; }
-.reveal__skip{
-  background:none; border:0; padding:4px 6px; cursor:pointer;
-  text-decoration:underline; color:var(--muted);
+
+/* битая картинка — тот самый значок «не загрузилось» */
+.brk-img{
+  display:inline-block; flex:0 0 auto;
+  width:120px; height:86px;
+  background:#FBFCFD center/26px no-repeat;
+  border:1px solid #DCE0E6;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 1.5h7l4 4v9h-11z' fill='none' stroke='%23AEB6BF'/%3E%3Cpath d='M9.5 1.5v4h4' fill='none' stroke='%23AEB6BF'/%3E%3Cpath d='M4 12l2.4-3.1 1.7 2.1 1.7-2.3 2.7 3.3z' fill='%23CFD5DC'/%3E%3Ccircle cx='5.6' cy='6.6' r='1.1' fill='%23CFD5DC'/%3E%3C/svg%3E");
 }
-.reveal__skip:hover{ color:var(--ink); }
-.no-js .reveal{ display:none; }
+.brk-img--xs{ width:22px; height:22px; background-size:14px; }
+
+/* серая строка вместо текста */
+.brk-ln{
+  display:block; width:var(--w,100%); height:11px;
+  background:#E4E8ED;
+}
+.brk-ln--link{ background:#CFE3F7; height:13px; }
+
+.brk-gap{ flex:1; }
+.brk-field{ width:170px; height:26px; border:1px solid #DCE0E6; background:#FBFCFD; }
+
+.broken__head{
+  display:flex; align-items:center; gap:14px;
+  padding:16px var(--gutter);
+  border-bottom:1px solid #E8EBEF;
+}
+.broken__nav{
+  display:flex; align-items:center; gap:64px;
+  padding:14px var(--gutter);
+  background:#7FBCE4;
+}
+.broken__body{
+  display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:22px;
+  padding:26px var(--gutter) 0;
+}
+.broken__main{ display:grid; gap:14px; }
+.brk-card{
+  display:flex; gap:18px; align-items:flex-start;
+  border:1px solid #E8EBEF; padding:16px;
+}
+.brk-lines{ display:grid; gap:12px; flex:1; padding-top:4px; }
+.broken__side{ display:grid; gap:14px; align-content:start; }
+.brk-box{
+  display:flex; align-items:center; gap:10px;
+  border:1px solid #E8EBEF; padding:16px; min-height:64px;
+}
+
+/* --- робот смахивает страницу --- */
+.sweep{
+  position:fixed; inset:0; z-index:101;
+  pointer-events:none; opacity:0;
+  animation:sweepShow var(--sweep-ms) var(--sweep-delay) linear forwards;
+}
+@keyframes sweepShow{
+  0%{ opacity:0 } 12%{ opacity:1 } 86%{ opacity:1 } 100%{ opacity:0 }
+}
+.sweep__edge{
+  position:absolute; top:0; bottom:0; width:3px;
+  background:linear-gradient(180deg, transparent, var(--accent), transparent);
+  animation:sweepRide var(--sweep-ms) var(--sweep-delay) cubic-bezier(.62,.03,.3,1) forwards;
+}
+.sweep__bot{
+  position:absolute; top:50%; width:132px; height:132px;
+  transform:translate(-50%,-50%);
+  filter:drop-shadow(0 12px 26px rgba(46,80,94,.22));
+  animation:sweepRide var(--sweep-ms) var(--sweep-delay) cubic-bezier(.62,.03,.3,1) forwards;
+}
+@keyframes sweepRide{ from{ left:0% } to{ left:100% } }
+
+@media (max-width:880px){
+  .broken__body{ grid-template-columns:1fr; }
+  .broken__side{ display:none; }
+  .broken__nav{ gap:28px; }
+  .brk-img{ width:84px; height:64px; }
+  .sweep__bot{ width:92px; height:92px; }
+}
 
 /* ============ ТИКЕР ============ */
 .ticker{
@@ -656,22 +678,8 @@ button{ font:inherit; color:inherit; }
   .nav,.header__cta{ display:none; }
   .burger{ display:block; }
   
-/* --- парящая геометрия первого экрана --- */
-.figures{ position:absolute; inset:0; pointer-events:none; color:var(--accent); }
-.figure{
-  position:absolute; opacity:.3;
-  transform:translate(calc(var(--px,0) * var(--d,1)), calc(var(--py,0) * var(--d,1)));
-  transition:transform .6s var(--ease);
-}
-/* держим фигуры в правой половине, подальше от заголовка */
-.figure--circle{ width:150px; height:150px; right:33%; top:11%;   --d:1.6;  opacity:.22; }
-.figure--square{ width:58px;  height:58px;  right:5%;  top:15%;   --d:-2.2; opacity:.3; }
-.figure--tri{    width:82px;  height:82px;  right:29%; bottom:13%; --d:2.4; opacity:.22; }
-.figure--hex{    width:190px; height:190px; right:8%;  bottom:3%;  --d:-1.4; opacity:.13; }
-.figure--cross{  width:24px;  height:24px;  right:23%; top:37%;    --d:3;   opacity:.42; }
-@media (max-width:880px){ .figure--circle,.figure--tri,.figure--cross{ display:none; } }
 
-.crafted__grid{ grid-template-columns:1fr; }
+  .crafted__grid{ grid-template-columns:1fr; }
   .crafted__robot{ order:-1; }
   .robot{ max-width:210px; }
   .terms{ margin-top:32px; }
@@ -689,9 +697,7 @@ button{ font:inherit; color:inherit; }
   .marks::before,.marks::after{ display:none; }
   .hero{ min-height:auto; }
   .crafted{ padding:48px 0 120px; }
-  .plain{ padding:32px var(--gutter) 120px; align-items:flex-start; }
   .reveal{ left:var(--gutter); right:var(--gutter); bottom:16px; font-size:11px; }
-  .reveal__bar{ flex:1; width:auto; }
   .btn{ height:48px; padding:0 22px; }
   .hero__actions .btn{ flex:1 1 100%; }
   .cta{ clip-path:polygon(0 24px, 100% 0, 100% 100%, 0 100%); }
@@ -706,16 +712,15 @@ button{ font:inherit; color:inherit; }
     animation-iteration-count:1 !important;
     transition-duration:.001ms !important;
   }
-  .js .crafted{ -webkit-mask-image:none !important; mask-image:none !important; }
   .js .hero::after{ display:none; }
   .reveal{ display:none; }
   .js .reveal-up{ opacity:1; transform:none; }
+  .broken, .sweep{ display:none !important; }
   .figure{ transform:none !important; }
   .card::before{ display:none; }
   .work__go{ transform:none; }
 }
 
 @media print{
-  .fx,.reveal,.plain,.burger,.mmenu{ display:none !important; }
-  .js .crafted{ mask-image:none !important; }
+  .fx,.broken,.sweep,.burger,.mmenu{ display:none !important; }
 }

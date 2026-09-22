@@ -27,6 +27,71 @@
 
 <a class="skip-link" href="#main" data-ru="Перейти к содержимому" data-en="Skip to content">Перейти к содержимому</a>
 
+<!-- Открывающая сцена лежит на верхнем уровне, а не внутри main:
+     у main свой контекст наложения, и оттуда слой не смог бы перекрыть шапку. -->
+  <!-- Слой 1. Страница, которая не прогрузилась: битые картинки и серые строки.
+       Декоративный, скрыт от скринридеров и поисковиков. -->
+  <div class="broken" id="broken" aria-hidden="true">
+    <div class="broken__head">
+      <span class="brk-img brk-img--xs"></span>
+      <i class="brk-ln" style="--w:86px"></i>
+      <span class="brk-gap"></span>
+      <i class="brk-ln" style="--w:58px"></i>
+      <i class="brk-ln" style="--w:58px"></i>
+      <span class="brk-field"></span>
+    </div>
+
+    <div class="broken__nav">
+      <span class="brk-img brk-img--xs"></span>
+      <span class="brk-img brk-img--xs"></span>
+      <span class="brk-img brk-img--xs"></span>
+      <span class="brk-img brk-img--xs"></span>
+      <span class="brk-img brk-img--xs"></span>
+    </div>
+
+    <div class="broken__body">
+      <div class="broken__main">
+        <article class="brk-card">
+          <span class="brk-img"></span>
+          <div class="brk-lines">
+            <i class="brk-ln brk-ln--link" style="--w:58%"></i>
+            <i class="brk-ln" style="--w:86%"></i>
+            <i class="brk-ln" style="--w:40%"></i>
+          </div>
+        </article>
+        <article class="brk-card">
+          <span class="brk-img"></span>
+          <div class="brk-lines">
+            <i class="brk-ln brk-ln--link" style="--w:70%"></i>
+            <i class="brk-ln" style="--w:52%"></i>
+            <i class="brk-ln" style="--w:78%"></i>
+          </div>
+        </article>
+        <article class="brk-card">
+          <span class="brk-img"></span>
+          <div class="brk-lines">
+            <i class="brk-ln brk-ln--link" style="--w:64%"></i>
+            <i class="brk-ln" style="--w:34%"></i>
+          </div>
+        </article>
+      </div>
+
+      <aside class="broken__side">
+        <div class="brk-box"><span class="brk-img brk-img--xs"></span><i class="brk-ln brk-ln--link" style="--w:58%"></i></div>
+        <div class="brk-box"><span class="brk-img brk-img--xs"></span><i class="brk-ln brk-ln--link" style="--w:72%"></i></div>
+        <div class="brk-box"><span class="brk-img brk-img--xs"></span><i class="brk-ln brk-ln--link" style="--w:46%"></i></div>
+      </aside>
+    </div>
+  </div>
+
+
+  <!-- Робот смахивает не прогрузившуюся страницу и уходит за правый край -->
+  <div class="sweep" aria-hidden="true">
+    <span class="sweep__edge"></span>
+    <img class="sweep__bot" src="assets/img/robot-mark.svg" alt="" width="132" height="132">
+  </div>
+
+
 <!-- ============ РЕАКТИВНЫЙ ФОН ============ -->
 <div class="fx" aria-hidden="true">
   <canvas class="fx__canvas" id="fxCanvas"></canvas>
@@ -90,36 +155,6 @@
 <section class="hero" id="hero">
 
   <!-- Слой 1. «Скучный сайт». Декоративный, скрыт от скринридеров. -->
-  <div class="plain" aria-hidden="true">
-    <div class="plain__inner">
-      <p class="plain__crumbs" data-ru="Главная &gt; Разработка сайтов &gt; Услуги" data-en="Home &gt; Web development &gt; Services">Главная &gt; Разработка сайтов &gt; Услуги</p>
-      <h2 class="plain__title" data-ru="Добро пожаловать на наш сайт!" data-en="Welcome to our website!">Добро пожаловать на наш сайт!</h2>
-      <hr>
-      <p class="plain__text" data-ru="ООО «ЮВИ» осуществляет деятельность в сфере создания сайтов под ключ. Недорого. Быстро. Качественно. Работаем с 2019 года. Звоните!" data-en="YUVI LLC carries out activities in the field of turnkey website creation. Cheap. Fast. Quality. Working since 2019. Call us!">ООО «ЮВИ» осуществляет деятельность в сфере создания сайтов под ключ. Недорого. Быстро. Качественно. Работаем с 2019 года. Звоните!</p>
-      <p class="plain__links">
-        <a href="#hero" tabindex="-1" data-ru="Главная" data-en="Home">Главная</a> |
-        <a href="#hero" tabindex="-1" data-ru="О компании" data-en="About us">О компании</a> |
-        <a href="#hero" tabindex="-1" data-ru="Услуги" data-en="Services">Услуги</a> |
-        <a href="#hero" tabindex="-1" data-ru="Прайс-лист" data-en="Price list">Прайс-лист</a> |
-        <a href="#hero" tabindex="-1" data-ru="Гостевая книга" data-en="Guestbook">Гостевая книга</a> |
-        <a href="#hero" tabindex="-1" data-ru="Контакты" data-en="Contacts">Контакты</a>
-      </p>
-      <div class="plain__banner" data-ru="БАННЕР 468 × 60" data-en="BANNER 468 × 60">БАННЕР&nbsp;468&nbsp;×&nbsp;60</div>
-      <table class="plain__table">
-        <tr><td data-ru="Разработка сайта" data-en="Website development">Разработка сайта</td><td data-ru="от 10 000 руб." data-en="from 10 000 rub.">от 10 000 руб.</td></tr>
-        <tr><td data-ru="Продвижение" data-en="Promotion">Продвижение</td><td data-ru="договорная" data-en="negotiable">договорная</td></tr>
-        <tr><td data-ru="Хостинг в подарок" data-en="Free hosting">Хостинг в подарок</td><td data-ru="ДА" data-en="YES">ДА</td></tr>
-      </table>
-      <p class="plain__btns">
-        <button type="button" tabindex="-1" data-ru="Отправить заявку" data-en="Send request">Отправить заявку</button>
-        <button type="button" tabindex="-1" data-ru="Скачать прайс.doc" data-en="Download price.doc">Скачать прайс.doc</button>
-      </p>
-      <hr>
-      <p class="plain__counter" data-ru="Счётчик посещений: 0 0 0 2 4 1  |  Сайт лучше смотреть в Internet Explorer 6.0 при разрешении 1024×768" data-en="Visitor counter: 0 0 0 2 4 1  |  Best viewed in Internet Explorer 6.0 at 1024×768">Счётчик посещений: 0&nbsp;0&nbsp;0&nbsp;2&nbsp;4&nbsp;1 &nbsp;|&nbsp; Сайт лучше смотреть в Internet Explorer 6.0 при разрешении 1024×768</p>
-    </div>
-  </div>
-
-  <!-- Слой 2. Настоящий дизайн. Проступает под курсором. -->
   <div class="crafted" id="crafted">
 
     <!-- парящая геометрия, слегка отзывается на курсор -->
@@ -239,15 +274,6 @@
   </div>
 
   <!-- Подсказка и прогресс «починки» -->
-  <div class="reveal" id="reveal">
-    <p class="reveal__hint">
-      <span class="reveal__dot" aria-hidden="true"></span>
-      <span data-ru="Поводите мышью — верните сайту дизайн" data-en="Move your mouse — restore the design">Поводите мышью — верните сайту дизайн</span>
-    </p>
-    <div class="reveal__bar"><i id="revealBar"></i></div>
-    <p class="reveal__pct"><span id="revealPct">0</span>%&nbsp;<span data-ru="исправлено" data-en="restored">исправлено</span></p>
-    <button type="button" class="reveal__skip" id="revealSkip" data-ru="Показать сразу" data-en="Reveal now">Показать сразу</button>
-  </div>
 </section>
 
 <!-- ============ ТИКЕР ============ -->

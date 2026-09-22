@@ -1,34 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="1080" height="1080" role="img" aria-label="ЮВИ">
-  <rect width="400" height="400" fill="#EEF2F8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%" role="img" aria-label="ЮВИ">
+  <rect width="400" height="400" fill="#EDF2F5"/>
   <defs>
-    <linearGradient id="sh" x1=".18" y1="0" x2=".78" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E8EE"/>
+    <linearGradient id="sh" x1=".2" y1="0" x2=".7" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DFE7EE"/>
     </linearGradient>
-    <radialGradient id="ln" cx="36%" cy="30%" r="74%">
-      <stop offset="0" stop-color="#8FC4FF"/>
-      <stop offset=".6" stop-color="#3E8BFF"/>
-      <stop offset="1" stop-color="#17418C"/>
-    </radialGradient>
+    <linearGradient id="vi" x1=".15" y1="0" x2=".6" y2="1">
+      <stop offset="0" stop-color="#5D8493"/><stop offset="1" stop-color="#2E505E"/>
+    </linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2=".5" y2="1">
+      <stop offset="0" stop-color="#7DA1B0"/><stop offset="1" stop-color="#547886"/>
+    </linearGradient>
   </defs>
 
-  <g transform="translate(200 200) scale(1.15) translate(-200 -200)">
-  <!-- лампочка -->
-  <path d="M200 116V96" stroke="#0B0B0C" stroke-width="11" stroke-linecap="round"/>
-  <circle cx="200" cy="80" r="19" fill="#3E8BFF"/>
+  <!-- антенна -->
+  <path d="M272 126 300 96" stroke="url(#ac)" stroke-width="13" stroke-linecap="round" fill="none"/>
+  <circle cx="306" cy="88" r="20" fill="url(#ac)"/>
+  <circle cx="299" cy="81" r="6" fill="#FFFFFF" opacity=".4"/>
 
   <!-- ушки -->
-  <rect x="52"  y="196" width="30" height="72" rx="15" fill="url(#sh)" stroke="#0B0B0C" stroke-width="11"/>
-  <rect x="318" y="196" width="30" height="72" rx="15" fill="url(#sh)" stroke="#0B0B0C" stroke-width="11"/>
+  <rect x="52"  y="176" width="42" height="74" rx="21" fill="url(#ac)"/>
+  <rect x="306" y="176" width="42" height="74" rx="21" fill="url(#ac)"/>
 
   <!-- голова -->
-  <rect x="86" y="112" width="228" height="208" rx="76" fill="url(#sh)" stroke="#0B0B0C" stroke-width="11"/>
+  <rect x="92" y="108" width="216" height="196" rx="80" fill="url(#sh)"/>
 
-  <!-- объектив -->
-  <circle cx="200" cy="216" r="82" fill="#12151B" stroke="#0B0B0C" stroke-width="10"/>
-  <circle cx="200" cy="216" r="66" fill="#080B11"/>
-  <circle cx="200" cy="216" r="45" fill="url(#ln)"/>
-  <circle cx="200" cy="216" r="19" fill="#060E1A"/>
-  <circle cx="182" cy="198" r="13" fill="#FFFFFF" opacity=".92"/>
-  <circle cx="219" cy="238" r="6"  fill="#FFFFFF" opacity=".4"/>
-  </g>
+  <!-- экран-лицо -->
+  <rect x="122" y="140" width="156" height="136" rx="58" fill="url(#vi)"/>
+  <path d="M140 164c19-14 44-18 66-14" stroke="#FFFFFF" stroke-width="9" opacity=".13"
+        fill="none" stroke-linecap="round"/>
+
+  <!-- глаза -->
+  <circle cx="168" cy="202" r="27" fill="#1C3D4A" stroke="#FFFFFF" stroke-width="6.5"/>
+  <circle cx="232" cy="202" r="27" fill="#1C3D4A" stroke="#FFFFFF" stroke-width="6.5"/>
+  <circle cx="158" cy="192" r="8" fill="#FFFFFF"/>
+  <circle cx="222" cy="192" r="8" fill="#FFFFFF"/>
+  <circle cx="176" cy="213" r="3.4" fill="#FFFFFF" opacity=".75"/>
+  <circle cx="240" cy="213" r="3.4" fill="#FFFFFF" opacity=".75"/>
+  <path d="M182 236q18 12 36 0" stroke="#1C3D4A" stroke-width="5" fill="none" stroke-linecap="round"/>
 </svg>

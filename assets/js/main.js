@@ -92,94 +92,50 @@
   });
 
   /* ---------------------------------------------------------
-     5. Главный приём: «скучный сайт чинится под курсором»
-     Курсор открывает круглое окно в настоящий дизайн.
-     Чем больше пути пройдено мышью, тем шире окно; после
-     TARGET пикселей дизайн раскрывается целиком и остаётся.
+     5. Открывающая сцена: страница «не прогрузилась», робот её смахивает
+
+     Сами движения делает CSS — тут только переключение состояний и
+     страховки. Важное: сцена ни при каких обстоятельствах не должна
+     оставить посетителя перед битой страницей, поэтому уборка
+     запускается тремя независимыми способами.
      --------------------------------------------------------- */
-  var hero = $('#hero');
-  var bar = $('#revealBar');
-  var pctOut = $('#revealPct');
-  var skipBtn = $('#revealSkip');
+  var root = document.documentElement;
 
-  var TARGET = 3400;      // пикселей движения мыши до полного раскрытия
-  var R_MIN = 140;        // стартовый радиус окна
-  var R_MAX = 300;        // радиус перед раскрытием
-  var IDLE_MS = 6000;     // если мышь стоит — раскрываем сами
-
-  var travel = 0;
-  var lastX = null, lastY = null;
-  var unlocked = false;
-  var idleTimer = null;
-
-  function setHole(x, y) {
-    hero.style.setProperty('--rx', x + 'px');
-    hero.style.setProperty('--ry', y + 'px');
-  }
-
-  function setRadius(r) {
-    hero.style.setProperty('--rr', r + 'px');
-  }
-
-  function unlock() {
-    if (unlocked) return;
-    unlocked = true;
-    clearTimeout(idleTimer);
-    if (bar) bar.style.width = '100%';
-    if (pctOut) pctOut.textContent = '100';
-    hero.classList.add('is-revealed');
-    window.setTimeout(function () { hero.classList.add('is-open'); }, 1100);
-  }
-
-  function armIdle() {
-    clearTimeout(idleTimer);
-    idleTimer = window.setTimeout(unlock, IDLE_MS);
-  }
-
-  if (hero && !reduceMotion) {
-    if (coarsePointer) {
-      // На тач-устройствах курсора нет — открываем сразу после первого касания
-      // или через короткую паузу, чтобы приём всё же считывался.
-      setHole(window.innerWidth / 2, window.innerHeight * 0.4);
-      setRadius(R_MIN);
-      window.setTimeout(unlock, 2200);
-      hero.addEventListener('touchstart', unlock, { passive: true, once: true });
+  if ($('#broken')) {
+    if (reduceMotion) {
+      // анимации отключены системно — сцены просто нет
+      root.classList.add('scene-done');
     } else {
-      setRadius(R_MIN);
-      armIdle();
+      var swept = false;
 
-      hero.addEventListener('pointermove', function (e) {
-        var rect = hero.getBoundingClientRect();
-        var x = e.clientX - rect.left;
-        var y = e.clientY - rect.top;
-        setHole(x, y);
+      function sweepDone() {
+        if (swept) return;
+        swept = true;
+        root.classList.add('scene-done');
+        window.clearTimeout(failsafe);
+        ['pointerdown', 'keydown', 'wheel', 'touchstart'].forEach(function (evt) {
+          window.removeEventListener(evt, sweepDone);
+        });
+      }
 
-        if (unlocked) return;
+      // 1. Штатно: когда доиграла анимация смахивания
+      var broken = $('#broken');
+      if (broken) {
+        broken.addEventListener('animationend', function (e) {
+          if (e.animationName === 'brokenWipe') sweepDone();
+        });
+      }
 
-        if (lastX !== null) {
-          travel += Math.hypot(x - lastX, y - lastY);
-        }
-        lastX = x; lastY = y;
+      // 2. Страховка: если animationend почему-то не пришёл
+      var css = getComputedStyle(document.documentElement);
+      var ms = function (name) { return (parseFloat(css.getPropertyValue(name)) || 0) * 1000; };
+      var failsafe = window.setTimeout(sweepDone, ms('--sweep-delay') + ms('--sweep-ms') + 1200);
 
-        var progress = Math.min(travel / TARGET, 1);
-        setRadius(R_MIN + (R_MAX - R_MIN) * progress);
-        if (bar) bar.style.width = (progress * 100).toFixed(1) + '%';
-        if (pctOut) pctOut.textContent = String(Math.round(progress * 100));
-
-        armIdle();
-        if (progress >= 1) unlock();
+      // 3. Нетерпеливый посетитель: любое действие убирает сцену сразу
+      ['pointerdown', 'keydown', 'wheel', 'touchstart'].forEach(function (evt) {
+        window.addEventListener(evt, sweepDone, { passive: true });
       });
-
-      // Ушли со страницы вниз — приём отыграл, показываем дизайн
-      window.addEventListener('scroll', function () {
-        if (!unlocked && window.scrollY > window.innerHeight * 0.35) unlock();
-      }, { passive: true });
     }
-
-    if (skipBtn) skipBtn.addEventListener('click', unlock);
-
-    // Клавиатура: доходя фокусом до содержимого, пользователь тоже должен всё видеть
-    hero.addEventListener('focusin', unlock);
   }
 
   /* ---------------------------------------------------------
